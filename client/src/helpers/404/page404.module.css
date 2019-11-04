@@ -1,0 +1,9 @@
+.container {
+    background-size: cover;
+    background:rgba(0, 0, 0, .65) url('/images/page404.jpg') no-repeat 50% 60%;
+    background-blend-mode: darken;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}

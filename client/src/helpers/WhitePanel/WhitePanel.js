@@ -11,11 +11,23 @@ const WPanel = ({title, sub, linkName, linkTo}) => {
                     <h3>{linkName}</h3>
                 </div>
                 <div className={classes.subWrapper}>
-                    <h3>Finest quality <span>{linkName}</span></h3>
-                    <span className={classes.subHeading}>Delivered right at your doorstep</span>
-                    <p>Hand crafted & stitched to suit your preferences </p>
+                    {
+                        !title ? <h3>Finest quality <span>{linkName}</span></h3>
+                            : <h3>{title}</h3>
+                    }
+                    {
+                        !sub ? <span className={classes.subHeading}>Delivered right at your doorstep</span>
+                            : <span className={classes.subHeading}>{sub}</span>
+                    }
+                    {
+                        !title ? <p>Hand crafted & stitched to suit your preferences </p>
+                            : <p>Here is what you can do </p>
+                    }
                     <div className={classes.btn}>
-                        <StyledButton content={'Shop now'} />
+                        {
+                            !title ? <StyledButton content={'Shop now'} />
+                            : <StyledButton content={'Home page'} linkto={'/'}/>
+                        }
                     </div>
                 </div>
             </div>

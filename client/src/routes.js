@@ -16,6 +16,7 @@ import Orders from "./Components/User/Orders/Orders";
 import AdminDashboard from "./Components/Admin/Dashboard/Dashboard";
 import Users from "./Components/Admin/Users/Users";
 import UserDetail from "./Components/Admin/Users/UserDetail/UserDetail";
+import Page404 from "./helpers/404/page404";
 const Routes = () => {
 
   return (
@@ -26,8 +27,8 @@ const Routes = () => {
         <Route exact path={'/account/login'} component={Auth(Login, false)} />
         <Route exact path={'/account/register'} component={Auth(Register, false)} />
         <Route exact path={'/user/shopingCart'} component={Auth(ShoppingCart, null)} />
-        <Route exact path={'/user/checkout'} component={Auth(Checkout, true, false)}/>
-        <Route exact path={'/user/checkout/payment'} component={Auth(Payment, true, false)} />
+        <Route exact path={'/user/checkout'} component={Auth(Checkout, null, false)}/>
+        <Route exact path={'/user/checkout/payment'} component={Auth(Payment, null, false)} />
         <Route exact path={'/user/dashboard'} component={Auth(Dashboard, false)} />
         <Route exact path={'/user/orders'} component={Auth(Orders, false)} />
 
@@ -36,6 +37,7 @@ const Routes = () => {
         <Route exact path={'/account/admin/users'} component={Auth(Users, true, true)} />
         <Route exact path={'/account/admin/user/:id'} component={Auth(UserDetail, true, true)} />
         <Route exact path={'/account/admin'} component={Auth(AdminDashboard, true, true)} />
+        <Route component={Auth(Page404, null, false)} />
       </Switch>
   )
 };

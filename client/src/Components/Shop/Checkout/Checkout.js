@@ -15,6 +15,7 @@ import {Redirect} from "react-router-dom";
 
 class Checkout extends Component {
     state = {
+        unwantedEntry: false,
         orderSuccess: false,
         id: null,
         formError: false,
@@ -86,6 +87,14 @@ class Checkout extends Component {
             },
         }
     };
+
+    componentDidMount() {
+        if(!localStorage.getItem('cart')){
+            this.setState({
+                unwantedEntry: true,
+            })
+        }
+    }
 
     onChange = element => {
         const newFormData = updateForm(element, this.state.formData, 'checkout');
