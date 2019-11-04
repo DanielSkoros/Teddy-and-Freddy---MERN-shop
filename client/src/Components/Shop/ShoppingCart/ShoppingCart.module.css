@@ -52,6 +52,19 @@
     right: 0;
 }
 
+.emptyCart {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.buttonsContainerCenter {
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (min-width: 768px) {
     .container {
         display: flex;

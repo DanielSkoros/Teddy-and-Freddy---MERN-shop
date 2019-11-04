@@ -314,7 +314,7 @@ class Shop extends Component {
     render() {
         return (
                   this.state.loading ? <Loading/> :
-                      <Layout>
+                      <Layout no>
                           { this.props.shop.size === 0 ? <NoResult success={false} content={'Sorry, no results'}/> :
                               <div className={classes.shop}>
                                   {

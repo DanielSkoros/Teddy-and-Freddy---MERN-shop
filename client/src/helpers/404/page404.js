@@ -5,7 +5,11 @@ import WPanel from "../WhitePanel/WhitePanel";
 const Page404 = ({unwanted}) => {
     return (
             <div className={classes.container}>
-                <WPanel title={'You should not be here'} sub={'If you thinks it is our mistake, contact us'}/>
+                {
+                    !unwanted ? <WPanel title={'You should not be here'} sub={'If you think it is our mistake, contact us'}/>
+                    :   <WPanel title={'You should not be here'} sub={'You probably tried to checkout with empty cart'}/>
+
+                }
             </div>
     );
 };

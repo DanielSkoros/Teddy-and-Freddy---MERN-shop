@@ -5,10 +5,11 @@ import classes from './ShoppingCart.module.css'
 import StyledButton from "../../../helpers/Button/Button";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import NoResult from "../NoResult";
 
 class ShoppingCart extends Component {
     state = {
-        products: null,
+        products: [],
         sum: 0,
     };
     componentDidMount() {
@@ -23,7 +24,13 @@ class ShoppingCart extends Component {
         this.calculateTotalPrice(newProducts);
         this.setState({
             products: newProducts
-        }, () => localStorage.setItem('cart', JSON.stringify(this.state.products)))
+        }, () => {
+            if (newProducts.length === 0){
+                localStorage.removeItem('cart');
+            }else {
+                localStorage.setItem('cart', JSON.stringify(this.state.products));
+            }
+        });
     };
 
     addItem = (id, count) => {
@@ -84,6 +91,15 @@ class ShoppingCart extends Component {
        }
     };
 
+    renderEmptyCart = () => (
+       <div className={classes.emptyCart}>
+            <p>Your shopping cart is empty</p>
+            <div className={classes.buttonsContainerCenter}>
+                <StyledButton content={'Shop now!'} linkto={'/shop/plushies'} />
+            </div>
+       </div>
+    );
+
     render() {
         return (
             <Layout>
@@ -91,11 +107,11 @@ class ShoppingCart extends Component {
                 <div className={classes.container}>
                     <div className={classes.shoppingCart}>
                         {
-                            this.state.products ?  this.renderShoppingCart() : null
+                            this.state.products && this.state.sum > 0 ?  this.renderShoppingCart() : this.renderEmptyCart()
                         }
                     </div>
                     {
-                        this.state.products ?
+                        this.state.products && this.state.sum > 0 ?
                             <div className={classes.summary}>
                                 <div className={classes.basketTotal}>
                                     <h5>Basket totals</h5>

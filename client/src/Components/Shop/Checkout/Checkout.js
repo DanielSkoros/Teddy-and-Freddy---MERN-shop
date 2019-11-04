@@ -12,6 +12,7 @@ import {faSmile} from "@fortawesome/free-solid-svg-icons/faSmile";
 import {Link} from "react-router-dom";
 import Login from "../../LogIn/Login";
 import {Redirect} from "react-router-dom";
+import Page404 from "../../../helpers/404/page404";
 
 class Checkout extends Component {
     state = {
@@ -196,10 +197,9 @@ class Checkout extends Component {
     );
 
     render() {
-
         return (
-            !this.props.location.state ?
-                <Redirect to={'/'}/>
+            this.state.unwantedEntry ?
+                <Page404 unwanted />
                 :
             <Layout no>
                 {
