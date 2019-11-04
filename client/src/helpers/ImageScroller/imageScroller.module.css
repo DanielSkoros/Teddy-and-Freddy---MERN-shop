@@ -1,0 +1,11 @@
+.imageContainer {
+    width: 85%;
+    margin: auto;
+}
+.icons {
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    cursor:pointer;
+}

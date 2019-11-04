@@ -1,0 +1,17 @@
+.productContainer {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionContainer {
+    width: 80%;
+    margin: auto auto 25px auto;
+}
+
+.descriptionContainer span {
+    display: inline-block;
+    background: #999592;
+    color: #fff;
+    padding: 5px 5px;
+}

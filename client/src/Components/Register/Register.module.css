@@ -1,0 +1,50 @@
+.formContainer {
+    width: 80vw;
+    margin: 45px auto;
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+    padding-top: 35px;
+}
+
+.buttonsContainer {
+    margin-top: 50px;
+}
+
+.switchType {
+    position: relative;
+    margin: 15px auto;
+    width: 20%;
+}
+
+.switchType::after, .switchType::before {
+    position: absolute;
+    bottom: calc(50% - 1px);
+    content: '';
+    height: 2px;
+    margin: 0 auto;
+    width: 10px;
+    background: #707070;
+    opacity: 0.3;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.switchType::after {
+    right: 0;
+}
+.switchType::before {
+    left: 0;
+}
+
+.errorLabel {
+    color: #F44336;
+    display:block;
+    font-size: 15px;
+}

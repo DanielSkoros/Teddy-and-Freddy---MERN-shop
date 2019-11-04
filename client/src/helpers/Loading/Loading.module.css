@@ -1,0 +1,83 @@
+.loaderBackground {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.001) 0%,rgba(0,0,0,0.001) 100%), url('/images/body.png');
+    position: relative;
+    top: -67px;
+    left: 0;
+    overflow: hidden;
+}
+
+.heartLoader {
+    display: inline-block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform-origin: 32px;
+    transform: rotate(45deg);
+    animation: heartLoad 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.heartLoader div {
+    margin: auto;
+    width: 26px;
+    height: 26px;
+    background: rgb(143,125,238);
+    transform: rotate(45deg);
+}
+
+.heartLoader:after,
+.heartLoader:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: rgb(143,125,238);
+}
+
+.heartLoader:before {
+    left: 2px;
+    top: -17px;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(45deg);
+}
+
+.heartLoader:after {
+    top: -17px;
+    left: 36px;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(45deg);
+}
+
+@keyframes heartLoad {
+    0% {
+        transform: scale(0.95) ;
+        opacity: 0.2;
+    }
+    5% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+    39% {
+        transform: scale(0.85);
+        opacity: 0.4;
+    }
+    45% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    60% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+}

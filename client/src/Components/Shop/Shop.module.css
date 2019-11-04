@@ -1,0 +1,62 @@
+.shopContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 25px auto;
+    padding: 5px;
+}
+
+.shop {
+    margin: 50px auto 0 auto;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.shopHeading {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+    padding: 50px 0;
+}
+
+.filtersContainer {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-image:  url('/images/body.png');
+    -webkit-animation: fadein 0.8s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.8s; /* Firefox < 16 */
+    -ms-animation: fadein 0.8s; /* Internet Explorer */
+    -o-animation: fadein 0.8s; /* Opera < 12.1 */
+    animation: fadein 0.8s;
+}
+
+.filtersContainer h1 {
+    margin: 25px auto 50px auto;
+    text-align: left;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media screen and (min-width: 768px){
+    .filtersContainer{
+        position: static;
+        width: 300px;
+        margin: 0 150px;
+    }
+
+    .shop {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .shopContainer {
+        width: calc(80vw - 300px);
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

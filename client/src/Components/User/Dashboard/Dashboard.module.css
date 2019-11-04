@@ -1,0 +1,24 @@
+.container {
+    margin: 50px auto;
+    width: 80vw;
+    text-align: center;
+}
+
+.descContainer {
+    width: 100vw;
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+    margin: auto;
+}
+
+@media screen and (min-width: 768px){
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 500px;
+    }
+}

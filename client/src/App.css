@@ -1,0 +1,45 @@
+html{
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body {
+    margin: 0;
+    padding: 104px 0 0 0;
+    background: white;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+#root {
+    padding-bottom: 305px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+button:focus,
+input:focus {
+    outline:0;
+}

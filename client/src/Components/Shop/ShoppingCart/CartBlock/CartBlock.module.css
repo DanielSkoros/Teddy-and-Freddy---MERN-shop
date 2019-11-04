@@ -1,0 +1,106 @@
+.item {
+    padding: 20px 60px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+}
+
+.cartBlock {
+    width: calc(100vw - 25px);
+    margin: auto;
+}
+
+.item:last-child {
+    border-top:  1px solid #E1E8EE;
+    border-bottom:  1px solid #E1E8EE;
+}
+.buttons {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.deleteBtn {
+    cursor: pointer;
+}
+.deleteBtn {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: url(/images/delete-icon.svg) no-repeat center;
+}
+
+.quantity {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.quantityCount {
+    margin: auto;
+    padding: 0;
+}
+
+.plusBtn, .minusBtn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.image img {
+    width: 50px;
+    height: 55px;
+}
+
+.description {
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 36px;
+}
+
+.description p {
+    margin: 0;
+    padding: 0;
+}
+
+.totalPrice {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 768px){
+    .cartBlock {
+        width: 50vw;
+        margin-right: 80px;
+    }
+
+    .item {
+        height: 150px;
+    }
+
+    .quantity {
+        width: 100px;
+    }
+
+    .image {
+        margin-left: 50px;
+    }
+
+    .image img {
+        width: 100px;
+        height: 90px;
+    }
+
+    .description {
+        font-size: 20px;
+        line-height: 72px;
+    }
+
+    .totalPrice {
+        font-size: 16px;
+    }
+}
+

@@ -1,0 +1,66 @@
+.shoppingCart {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.shoppingCart span {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.pageTitle {
+    text-align: center;
+    margin: 80px auto;
+}
+
+.Checkout {
+    margin: 30px 0;
+}
+
+.summary {
+    width: 95vw;
+    padding: 10px;
+}
+
+.summary h5 {
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-bottom: 3px;
+}
+
+.summary hr {
+    margin: 0;
+    width: 100%;
+}
+
+.lightLine {
+    opacity: 0.4;
+}
+
+.summary p {
+    font-size: 13px;
+    color: #a2a2a2;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.summary p span {
+    position: absolute;
+    right: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        width: 70vw;
+        margin: auto;
+    }
+}
+
+
+
+

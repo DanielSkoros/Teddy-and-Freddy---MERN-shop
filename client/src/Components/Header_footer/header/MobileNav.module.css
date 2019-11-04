@@ -1,0 +1,33 @@
+.mobileNav {
+    background: black;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 75px;
+}
+
+.right {
+    font-size: 24px;
+    color: white;
+    line-height: 72px;
+    height: 100%;
+    text-align: right;
+    padding-right: 40px;
+
+}
+
+.left {
+    height: 100%;
+}
+
+.middle {
+    margin: auto;
+    padding-left: 10px;
+}
+
+.middle div img {
+    width: 63px;
+    height: auto;
+}
+
+

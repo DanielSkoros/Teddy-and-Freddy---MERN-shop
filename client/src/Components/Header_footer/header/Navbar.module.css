@@ -1,0 +1,84 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: white;
+    margin: auto;
+}
+
+.navbar a {
+    color: white;
+    margin: 0;
+}
+
+.left {
+    align-self: flex-start;
+    text-transform: uppercase;
+}
+
+.middle {
+    display: flex;
+    font-size: 24px;
+    padding: 0 35px;
+}
+
+.iconCart {
+    margin: auto;
+    text-align: center;
+}
+
+.iconContact {
+    margin: auto;
+    text-align: center;
+}
+
+.right {
+    text-transform: uppercase;
+}
+
+.navbarNav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.navItem {
+    margin: auto 30px;
+}
+.navLinkSmall {
+    padding: 10px;
+}
+a, a > span {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    line-height: 24px;
+}
+a:before, a:after, a > span:before, a > span:after {
+    content: "";
+    position: absolute;
+    transition: transform 0.5s ease;
+}
+.navLinkSmall:before, .navLinkSmall:after {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: white;
+    content: '';
+}
+.navLinkSmall:before {
+    border-width: 2px 0 2px 0;
+    transform: scaleX(0);
+}
+.navLinkSmall:after {
+    border-width: 0 2px 0 2px;
+    transform: scaleY(0);
+}
+.navLinkSmall:hover:before, .navLinkSmall:hover:after {
+    transform: scale(1, 1);
+}

@@ -1,0 +1,50 @@
+.btn {
+    background:#0082ad;
+    color:#FFF;
+    border:3px solid #0082ad;
+    cursor: pointer;
+    display: block;
+    width: 130px;
+    height: 40px;
+    -webkit-transition:0.2s ease-in;
+    -moz-transition:0.2s ease-in;
+    -o-transition:0.2s ease-in;
+    -ms-transition:0.2s ease-in;
+    transition:0.2s ease-in;
+}
+
+.btn:hover {
+    background: transparent;
+    border:3px solid #999faf;
+    color: #999faf;
+}
+
+.filtersBtn {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    z-index: 2;
+}
+
+.hideBtn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    .btn {
+        background: transparent;
+        border:3px solid #999faf;
+        color: #999faf;
+    }
+    .btn:hover {
+        background:#0082ad;
+        color:#FFF;
+        border:3px solid #0082ad;
+    }
+
+    .filtersBtn {
+        display: none;
+    }
+}

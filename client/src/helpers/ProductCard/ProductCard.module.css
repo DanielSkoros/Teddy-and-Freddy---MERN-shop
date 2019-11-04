@@ -1,0 +1,73 @@
+.cardContainer {
+    margin: 5px auto 50px auto;
+    padding: 15px;
+    text-align: center;
+    min-width: 250px;
+}
+
+.cardContainerShop {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-width: 30%;
+}
+
+.productImage {
+    width: 100px;
+    height: 150px;
+    margin: auto;
+}
+
+.cardContainer img {
+    height: 200px;
+    width: 150px;
+}
+.cardContainer span, .cardContainerShop span {
+    font-weight: bold;
+    text-align: center;
+}
+
+.cardContainer p {
+    line-height: 130%;
+}
+
+.right {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.heartContainer {
+    margin: 15px auto;
+    width: 100%;
+    color: #0082ad;
+}
+
+.buttonContainer {
+    width: 50%;
+    margin: auto;
+}
+
+.buttonContainerShop {
+    width: 100%;
+    margin: auto auto 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px){
+    .cardContainer img {
+        height: 300px;
+        width: 210px;
+    }
+    .cardContainer p {
+        line-height: 130%;
+        font-size: 130%;
+    }
+
+    .cardContainer {
+        border: 0;
+    }
+
+}
+

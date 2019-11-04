@@ -1,0 +1,15 @@
+.NoResultContainer {
+    margin: 50px auto;
+    width: 80%;
+    position: relative;
+    height: 80vh;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    width: 100%;
+}

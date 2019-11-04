@@ -1,0 +1,59 @@
+.card {
+    background: white;
+    margin: 25px auto;
+    border-radius: 2px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.iconLeft {
+    font-size: 48px;
+    padding: 25px;
+    color: rgb(143,125,238);;
+}
+
+.rightPanel {
+    margin: 7% auto auto 0;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+}
+.rightPanel h3 {
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.ordersCount {
+    align-self: flex-end;
+}
+
+.ordersCount p {
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+}
+
+.userContainer {
+    text-align: left;
+    line-height: 1.75em;
+}
+
+.credentials {
+    text-transform: capitalize;
+    display: flex;
+}
+
+.manage {
+    display: flex;
+    margin: auto;
+    height: 100%;
+    width: 25%;
+}
+
+.iconRight {
+    font-size: 32px;
+    opacity: 0.7;
+}

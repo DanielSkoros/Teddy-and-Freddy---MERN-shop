@@ -1,0 +1,103 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background: #201E1C;
+    color: white;
+}
+
+.footerContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    display: flex;
+}
+
+.Logo div img{
+    width: 90px;
+    height: 82px;
+}
+
+.logoDescription span {
+    color: #3090ad;
+}
+
+.footerLinksContainer {
+    display: none;
+}
+
+.footerSocialIcons {
+    width: 100%;
+    margin: 25px auto;
+    padding: 15px;
+    font-size: 21px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px){
+    .footerContainer {
+        padding: 50px;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .Logo div img {
+        width: 160px;
+        height: 146px;
+        margin-right: 150px;
+    }
+
+    .footerLinksContainer {
+        display: flex;
+        width: 45%;
+        justify-content: space-evenly;
+        align-self: flex-start;
+    }
+
+    .footerLinksLeft, .footerLinksRight {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        text-transform: uppercase;
+    }
+
+    .footerLinksLeft ul li h4, .footerLinksRight ul li h4 {
+        margin: 0 auto 15px auto;
+        padding: 0;
+    }
+
+    .footerLinksLeft ul li a:hover, .footerLinksRight ul li a:hover {
+        color: #3090ad;
+    }
+
+
+    .footerSocialIcons {
+        width: auto;
+        height: 100%;
+        flex-direction: column;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        margin: 0;
+        font-size: 28px;
+        justify-content: space-around;
+    }
+
+    .left {
+        width: 50%;
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+}
+
+
+

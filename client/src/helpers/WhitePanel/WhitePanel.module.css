@@ -1,0 +1,99 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.textWrapper {
+    width: 50%;
+    height: 10vh;
+    margin: auto 10px;
+    padding: 25px;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    display: none;
+}
+
+.subWrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    padding: 50px 75px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.WPanel h3 {
+    margin: 0;
+    color: white;
+    font-size: 32px;
+}
+
+.subWrapper span {
+    color: #3090ad;
+}
+
+.subWrapper h3 > span {
+    text-transform: lowercase;
+    line-height: 1.5em;
+}
+
+.subWrapper h3 {
+    font-size: 1.75em;
+}
+
+.subWrapper p{
+    color: white;
+}
+
+.subWrapper button {
+    margin-top: 50px;
+}
+
+.subHeading {
+    font-size: 1.25em;
+}
+
+.btn {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px){
+    .container {
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .textWrapper {
+        display: none;
+    }
+
+    .subWrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 50%;
+        padding: 50px 100px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.7);
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;
+    }
+
+
+    .subWrapper:hover {
+        filter: grayscale(0);
+    }
+
+
+}
+
+

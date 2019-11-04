@@ -1,0 +1,18 @@
+.mainContainer {
+    width: 80%;
+    margin: 0 auto auto auto;
+    min-height: 500px;
+
+}
+.textLogo  {
+    margin: 50px auto 50px auto;
+    width: 141px;
+    height: 120px;
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    .textLogo {
+        display: none;
+    }
+}

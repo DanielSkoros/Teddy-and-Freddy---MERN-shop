@@ -1,0 +1,43 @@
+.socialContainer {
+    min-height: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px auto;
+
+    border-top: 2px solid #D5CFCF;
+    border-bottom: 2px solid #D5CFCF;
+}
+
+.socialContainer a {
+    margin: auto;
+    font-size: 48px;
+}
+
+.socialContainer a:first-child:hover {
+    transition: all 0.3s ease-in-out;
+    color: #3b5998;
+}
+
+.socialContainer a:nth-child(2):hover {
+    color: #00acee;
+    transition: all 0.3s ease-in-out;
+}
+
+.socialContainer a:last-child:hover {
+    color: #C13584;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 768px){
+    .socialContainer a {
+        font-size: 5em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .socialContainer {
+        margin: 150px auto;
+    }
+
+
+}

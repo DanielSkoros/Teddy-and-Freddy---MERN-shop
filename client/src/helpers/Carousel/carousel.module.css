@@ -1,0 +1,46 @@
+.sliderWrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slider {
+    width: 300vw;
+}
+
+.arrowLeft, .arrowRight {
+    display: none;
+}
+@media screen and (min-width: 768px){
+    .arrowLeft, .arrowRight {
+        border: solid white;
+        border-width: 0 15px 15px 0;
+        display: inline-block;
+        padding: 15px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0.3;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .arrowRight {
+        top:50%;
+        transform: translateY(-50%) rotate(-45deg);
+        right: 50px;
+        z-index: 1;
+    }
+
+    .arrowLeft {
+        top:50%;
+        transform: translateY(-50%) rotate(135deg);
+        left: 50px;
+        z-index: 1;
+    }
+
+    .hideArrow {
+        opacity: 0;
+    }
+
+}
