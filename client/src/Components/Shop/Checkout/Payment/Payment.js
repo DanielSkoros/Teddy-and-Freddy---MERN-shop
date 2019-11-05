@@ -42,7 +42,7 @@ class Payment extends Component {
                 {
                         this.state.error ? <NoResult content={'There was an error with your payment. Try again or do a bank transfer'} /> :
                             this.state.cancelled ? <NoResult content={'You have cancelled your payment. Try again or do a bank transfer'} /> :
-                                this.state.success ? <NoResult success content={'Order placed successfully'} /> : this.renderPaymentScreen()
+                                this.state.success ? <NoResult success content={'Payment done. Now wait to receive your product'} /> : this.renderPaymentScreen()
                 }
             </Layout>
         );

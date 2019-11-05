@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 0;
+    top: 75px;
     left: 0;
 }
 .slider {
@@ -26,14 +26,14 @@
     }
 
     .arrowRight {
-        top:50%;
+        top: calc(50vh - (100px / 2));
         transform: translateY(-50%) rotate(-45deg);
         right: 50px;
         z-index: 1;
     }
 
     .arrowLeft {
-        top:50%;
+        top: calc(50vh - (100px / 2));
         transform: translateY(-50%) rotate(135deg);
         left: 50px;
         z-index: 1;
@@ -41,6 +41,11 @@
 
     .hideArrow {
         opacity: 0;
+    }
+
+    .sliderWrapper {
+        top: 0;
+        left: 0;
     }
 
 }

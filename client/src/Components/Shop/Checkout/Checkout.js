@@ -1211,7 +1211,8 @@ class Checkout extends Component {
         event.preventDefault();
         const formData = generateData(this.state.formData, 'checkout');
         const {name, lastName, email, country, city, street, unit, state, zip, phone} = formData;
-        const { userId } = this.props.user.userData;
+
+        const { userId = 'guest' } = this.props.user.userData;
         const formIsValid = isFormValid(this.state.formData, 'checkout');
         const { products } = this.props.location.state;
         const dataToSubmit = {
@@ -1227,6 +1228,7 @@ class Checkout extends Component {
         if(formIsValid) {
            this.props.dispatch(placeOrder(dataToSubmit))
                .then(res => {
+                   console.log(res)
                    this.setState({id: res.payload.order._id});
                    this.props.dispatch(updateHistory(res.payload.order._id))
                        .then(res => {

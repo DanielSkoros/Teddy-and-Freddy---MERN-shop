@@ -16,3 +16,10 @@
         display: none;
     }
 }
+
+@media screen and (max-height: 641px) {
+    .mainContainer {
+        margin: 0 auto;
+        min-height: 300px;
+    }
+}
