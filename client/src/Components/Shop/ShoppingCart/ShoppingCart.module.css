@@ -72,6 +72,9 @@
         width: 70vw;
         margin: auto;
     }
+    .summary {
+        width: 50%;
+    }
 }
 
 

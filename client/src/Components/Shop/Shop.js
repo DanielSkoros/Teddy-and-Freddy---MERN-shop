@@ -255,7 +255,6 @@ class Shop extends Component {
                 material: Array.from(this.selectedCheckboxes.material),
             }
         }));
-        console.log(this.selectedCheckboxes)
     };
 
     renderFilterPage = () => (

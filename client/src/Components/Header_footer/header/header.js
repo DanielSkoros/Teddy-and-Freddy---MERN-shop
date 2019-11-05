@@ -24,11 +24,16 @@ class Header extends Component {
 
     componentDidMount() {
         this.setState({
-            isMobile: window.innerWidth <= 768
+            isMobile: window.innerWidth < 1200
         }, () => {
             if(!this.state.isMobile && this.props.location.pathname === '/'){
                 window.addEventListener('scroll', this.stickHeader);
             }
+            window.addEventListener('resize', () => {
+                this.setState({
+                    isMobile: window.innerWidth < 770
+                })
+            })
         })
     }
 

@@ -22,9 +22,45 @@ const orderSchema = mongoose.Schema({
         minLength: 2,
         maxLength: 64,
     },
-    address: {
+    country: {
         type: String,
         required: true,
+        minLength: 2,
+        maxLength: 128,
+    },
+    city: {
+        type: String,
+        required: true,
+        minLength: 2,
+        maxLength: 128,
+    },
+    street: {
+        type: String,
+        required: true,
+        minLength: 2,
+        maxLength: 128,
+    },
+    unit: {
+        type: String,
+        required: false,
+        minLength: 1,
+        maxLength: 128,
+    },
+    state: {
+        type: String,
+        required: true,
+        minLength: 2,
+        maxLength: 128,
+    },
+    zip: {
+        type: String,
+        required: true,
+        minLength: 1,
+        maxLength: 128,
+    },
+    phone: {
+        type: String,
+        required: false,
         minLength: 2,
         maxLength: 128,
     },

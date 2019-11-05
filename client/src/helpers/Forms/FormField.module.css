@@ -1,5 +1,5 @@
 .formBlock {
-    width: 80vw;
+    width: 90%;
     margin: 25px auto;
 }
 
@@ -24,7 +24,7 @@
 }
 
 input, textarea, select {
-    width: 100%;
+    width: 100% ;
     background: transparent;
     border: 0;
     border-bottom: 1px solid;
@@ -59,7 +59,8 @@ input::placeholder {
 
 @media screen and (min-width: 768px){
     .formBlock{
-        width: 300px;
+        max-width: 90%;
     }
+
 
 }

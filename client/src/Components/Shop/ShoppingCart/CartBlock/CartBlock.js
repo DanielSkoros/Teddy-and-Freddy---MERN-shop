@@ -7,17 +7,17 @@ import {faMinus} from '@fortawesome/free-solid-svg-icons'
 
 const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOne, subtractOne}) => {
     return (
-        <div className={classes.cartBlock}>
-            <div className={classes.item}>
-                <div className={classes.buttons}>
-                    <button className={classes.deleteBtn} onClick={() => deleteFromCart(id)}>
-                    </button>
-                </div>
+        image ?
+            <div className={classes.cartBlock}>
+                <div className={classes.item}>
+                    <div className={classes.buttons}>
+                        <button className={classes.deleteBtn} onClick={() => deleteFromCart(id)}>
+                        </button>
+                    </div>
 
-                <div className={classes.image}>
-                    <img src={image} alt=""/>
-                </div>
-
+                    <div className={classes.image}>
+                        <img src={image} alt=""/>
+                    </div>
 
                     <div className={classes.description}>
                         <Link to={linkto}>
@@ -26,20 +26,30 @@ const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOn
                         <div className={classes.totalPrice}>{count} x ${price}</div>
                     </div>
 
-
-                <div className={classes.quantity}>
-                    <button className={classes.plusBtn} onClick={() => addOne(id, count)}>
-                        <FontAwesomeIcon icon={faPlus}/>
-                    </button>
-                    <div className={classes.quantityCount}>{count}</div>
-                    <button className={classes.minusBtn} onClick={() => subtractOne(id, count)}>
-                        <FontAwesomeIcon icon={faMinus}/>
-                    </button>
+                    <div className={classes.quantity}>
+                        <button className={classes.plusBtn} onClick={() => addOne(id, count)}>
+                            <FontAwesomeIcon icon={faPlus}/>
+                        </button>
+                        <div className={classes.quantityCount}>{count}</div>
+                        <button className={classes.minusBtn} onClick={() => subtractOne(id, count)}>
+                            <FontAwesomeIcon icon={faMinus}/>
+                        </button>
+                    </div>
                 </div>
-
+            </div>
+            :
+            <div className={classes.cartBlock}>
+                <div className={classes.item}>
+                    <div className={classes.description}>
+                        <Link to={linkto}>
+                            <p>{name}</p>
+                        </Link>
+                        <div className={classes.totalPrice}>{count} x ${price}</div>
+                    </div>
+                </div>
             </div>
 
-        </div>
+
     );
 };
 

@@ -1,10 +1,11 @@
 .navbar {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     color: white;
     margin: auto;
+    max-height: 110px;
 }
 
 .navbar a {
@@ -81,4 +82,17 @@ a:before, a:after, a > span:before, a > span:after {
 }
 .navLinkSmall:hover:before, .navLinkSmall:hover:after {
     transform: scale(1, 1);
+}
+
+@media  screen and (min-width: 770px) {
+    .left, .right {
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 771px) and (max-width: 1600px){
+    .middle {
+        display: none;
+    }
+
 }

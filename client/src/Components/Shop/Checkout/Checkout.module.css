@@ -7,3 +7,37 @@
 .orderSuccesIcon {
     font-size: 24px;
 }
+
+.checkoutContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto;
+}
+
+.buttonsContainerCenter {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media  screen and (min-width: 768px) {
+    .checkoutContainer {
+        width: 80%;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .shoppingCartContainer {
+        display: none;
+    }
+
+    .formRow {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .buttonsContainerCenter {
+        margin-top: 100px;
+    }
+}
