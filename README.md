@@ -42,3 +42,4 @@ This project is licensed under the MIT License
 * Better managing of product data *
 * Notification system (user and admin panel) + email notification *
 * Add email confirmation on register, allow user to change profile information
+* Search bar for products, users, orders etc.
