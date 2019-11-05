@@ -38,7 +38,7 @@ This project is licensed under the MIT License
 * Fix some aligment issues on tablet devices
 * Change front end looks of user and admin panel
 * Make admin panel more useful
-** Implement charts and data for it (products sold, customer base growth, monthly/weekly/dayly/yearly revenue etc.) **
-** Better managing of product data **
-** Notification system (user and admin panel) + email notification **
+* Implement charts and data for it (products sold, customer base growth, monthly/weekly/dayly/yearly revenue etc.) *
+* Better managing of product data *
+* Notification system (user and admin panel) + email notification *
 * Add email confirmation on register, allow user to change profile information
