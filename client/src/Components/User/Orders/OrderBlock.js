@@ -24,6 +24,7 @@ class OrderBlock extends Component {
         this.componentMounted = true;
         this.props.dispatch(getOrderProducts(this.props.id))
             .then(res => {
+                console.log(res)
                     if(this.componentMounted){
                         this.setState({
                             loading: false,
@@ -70,7 +71,7 @@ class OrderBlock extends Component {
         const {id} = this.props;
         const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
         return (
-                this.state.loading && !this.props.user.userData.isAdmin ? <Loading/> :
+                this.state.loading  ? <Loading/> :
                     <div className={classes.orderBlock} onClick={() => this.toggleDropdown(id)}>
                         <div className={classes.top}>
                             <span>{(new Date(this.props.date)).toLocaleDateString('en-US', DATE_OPTIONS)}</span>

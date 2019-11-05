@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import classes from "../../../User/Dashboard/UserBlock/UserBlock.module.css";
+import classes from "./AdminBlock.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const AdminBlock = ({description, count, linkto, icon}) => {
@@ -15,7 +15,7 @@ const AdminBlock = ({description, count, linkto, icon}) => {
                     {
                         count > 0 ?
                             <>
-                                <br/><br/>
+                                <br/>
                                 {count}
                             </> : null
                     }

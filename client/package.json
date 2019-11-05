@@ -5,8 +5,10 @@
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@o2xp/react-datatable": "^1.1.18",
     "axios": "^0.19.0",
     "react": "^16.9.0",
+    "react-base-table": "^1.9.1",
     "react-dom": "^16.9.0",
     "react-easy-swipe": "0.0.18",
     "react-images": "^1.0.0",
@@ -16,6 +18,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "react-slick": "^0.25.2",
+    "react-table": "^6.10.3",
     "react-touch": "^0.4.4",
     "react-touch-events": "^2.1.0",
     "redux": "^4.0.4",

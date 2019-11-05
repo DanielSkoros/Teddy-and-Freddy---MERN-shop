@@ -1,0 +1,32 @@
+.card {
+    margin: 10px auto;
+    border-radius: 2px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    display: flex;
+    justify-content: space-around;
+    height: 75px;
+    background: #e8e6f5;
+    position: relative;
+}
+
+.icon {
+    font-size: 48px;
+    padding: 25px;
+    color: rgb(143,125,238);;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.description {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px){
+    .card {
+        width: 300px;
+    }
+}
