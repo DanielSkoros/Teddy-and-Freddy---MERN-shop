@@ -311,7 +311,7 @@ app.post('/api/users/address', auth, (req,res) => {
 
 });
 
-app.post('/api/users/orders', auth, (req, res) => {
+app.post('/api/users/orders', (req, res) => {
     const order = new Order(req.body);
     order.save((err, doc) => {
         if (err) return res.json({success: false, err})
