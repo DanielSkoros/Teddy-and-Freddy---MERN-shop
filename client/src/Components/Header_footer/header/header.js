@@ -29,16 +29,13 @@ class Header extends Component {
             if(!this.state.isMobile && this.props.location.pathname === '/'){
                 window.addEventListener('scroll', this.stickHeader);
             }
-            window.addEventListener('resize', () => {
-                this.setState({
-                    isMobile: window.innerWidth < 770
-                })
-            })
+            window.addEventListener('resize', this.resize)
         })
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.stickHeader);
+        window.removeEventListener('resize', this.resize);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -47,6 +44,12 @@ class Header extends Component {
                 window.addEventListener('scroll', this.stickHeader);
             }
         }
+    }
+
+    resize = () => {
+        this.setState({
+            isMobile: window.innerWidth < 770
+        })
     }
 
     stickHeader = () => {

@@ -7,6 +7,7 @@ import AdminBlock from "./AdminBlock/AdminBlock";
 import {faEdit, faPlus, faTags, faUser} from "@fortawesome/free-solid-svg-icons";
 import classes from "./Dashboard.module.css";
 import Table from "./AdminTable/AdminTable";
+import Charts from "./Charts/Charts";
 
 class AdminDashboard extends Component {
 
@@ -17,6 +18,7 @@ class AdminDashboard extends Component {
         usersCount: 0,
         ordersCount: 0,
         total: 0,
+        revenue: null,
     };
 
     componentDidMount() {
@@ -42,14 +44,30 @@ class AdminDashboard extends Component {
             .then(() => this.setState({
                 ordersCount: this.state.orders.length,
                 usersCount: this.state.users.length,
+                total: this.state.orders.reduce((a, b) => ({total: a.total + b.total})),
                 loading: false,
-            }, () => console.log(this.state.orders)))
+            }, () => this.calculateMonthlyRevenue()))
     }
 
     componentWillUnmount() {
         this.componentMounted = false;
     }
 
+    calculateMonthlyRevenue = () => {
+        const { orders } = this.state;
+        const result = orders.reduce((r, { createdAt, total }) => {
+            const [year, month] = createdAt.split('-', 2);
+            r[year] = r[year] || { total: 0 };
+            r[year][month -1 ] = (r[year][month - 1] || 0) + total;
+            r[year].total = null;
+            return r;
+        }, {});
+
+        this.setState({
+            revenue: result,
+        })
+
+    };
 
 
     render() {
@@ -68,6 +86,14 @@ class AdminDashboard extends Component {
                                    this.state.orders ? <Table data={this.state.orders.slice(0, 5)}/> : null
                                }
                            </div>
+                       <div className={classes.chartContainer}>
+                           <Charts
+                               revenue={this.state.revenue}
+                               labels={['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']}
+                               type={'line'}
+                               title={'Monthly revenue'}
+                           />
+                       </div>
                    </AdminLayout>
 
                    : null

@@ -12,8 +12,6 @@ import {faSmile} from "@fortawesome/free-solid-svg-icons/faSmile";
 import {Link} from "react-router-dom";
 import Page404 from "../../../helpers/404/page404";
 import CartBlock from "../ShoppingCart/CartBlock/CartBlock";
-import Checkbox from "../../../helpers/Forms/Checkbox";
-import formStyles from "../../../helpers/Forms/FormField.module.css";
 
 class Checkout extends Component {
     state = {
@@ -1214,7 +1212,8 @@ class Checkout extends Component {
 
         const { userId = 'guest' } = this.props.user.userData;
         const formIsValid = isFormValid(this.state.formData, 'checkout');
-        const { products } = this.props.location.state;
+        const { products, total } = this.props.location.state;
+        console.log(total)
         const dataToSubmit = {
             name,
             lastName,
@@ -1222,6 +1221,7 @@ class Checkout extends Component {
             phone,
             email,
             products,
+            total,
             userId
         };
 
