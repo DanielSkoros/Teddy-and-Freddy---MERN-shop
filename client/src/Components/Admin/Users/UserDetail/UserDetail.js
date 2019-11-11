@@ -53,7 +53,7 @@ class UserDetail extends Component {
                                 <h3>{this.props.user.name}</h3>
                             </div>
                             <div className={classes.ordersCount}>
-                                <p style={{fontWeight: 'bold'}}>Orders: {this.props.location.state.ordersCount}</p>
+                                <p style={{fontWeight: 'bold'}}>Orders: {this.state.orders.length}</p>
                             </div>
                             <div className={classes.ordersContainer}>
                                 {

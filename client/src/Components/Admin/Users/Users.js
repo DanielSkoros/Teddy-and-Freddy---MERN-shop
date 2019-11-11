@@ -6,51 +6,41 @@ import classes from '../Dashboard/Dashboard.module.css'
 import Loading from "../../../helpers/Loading/Loading";
 import {connect} from "react-redux";
 import {getUsersList} from "../../../actions/Admin/adminActions";
+import Table from "../Dashboard/AdminTable/AdminTable";
 class Users extends Component {
 
     state = {
-        loading: true,
+        loading: false,
+        userColumns: [
+            {
+                id: "_id",
+                label: "User ID",
+                colSize: "80px",
+                dataType: "text"
+            },
+            {
+                id: "name",
+                label: "First name",
+                colSize: "50px"
+            },
+            {
+                id: "lastName",
+                label: "Last name",
+                colSize: "50px",
+            },
+        ]
     };
-
-    componentDidMount() {
-        this.componentMounted = true;
-        this.props.dispatch(getUsersList())
-            .then(res => {
-                if(this.componentMounted){
-                    this.setState({
-                        loading: false
-                    })
-                }
-            })
-            .catch(err => err);
-    }
-
-    componentWillUnmount() {
-        this.componentMounted = false;
-    }
-
-    renderUserBlocks = () => (
-        this.props.usersList.usersList.map(user => (
-            <UserListBlock
-              key={user._id}
-              name={user.name}
-              lastName={user.lastName}
-              linkto={`/account/admin/user/${user._id}`}
-              id={user._id}
-              ordersCount={user.history.length}
-            />
-        ))
-    );
 
     render() {
         return (
             this.state.loading ? <Loading/> :
                 <AdminLayout>
-                    <h2 className={classes.heading}>Users list</h2>
-                    <div className={classes.container}>
-                        {
-                            this.props.usersList ? this.renderUserBlocks() : null
-                        }
+                    <div className={classes.containerUser}>
+                           <Table
+                               data={this.props.location.state.data}
+                               columns={this.state.userColumns}
+                               keyColumn={"id"} title={'User list'}
+                               dtKey={'userList'} prefix={'user'}/>
                     </div>
                 </AdminLayout>
         );

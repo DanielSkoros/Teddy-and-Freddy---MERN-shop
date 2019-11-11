@@ -17,8 +17,16 @@
     .container {
         flex-direction: row;
     }
+
+    .containerUser {
+        width: 80%;
+        margin: auto;
+    }
+
     .ordersContainer {
         width: 45%;
+        height: 400px;
+        margin-top: 50px;
     }
 
     .chartContainer {

@@ -3,10 +3,9 @@ import { Datatable } from "@o2xp/react-datatable";
 import {Link} from "react-router-dom";
 
 
-const Table = ({data, columns, keyColumn, title, dtKey}) => {
+const Table = ({data, columns, keyColumn, title, dtKey, prefix}) => {
     let options = {
         keyColumn: keyColumn,
-        dtKey: dtKey,
         title: title,
         features: {
             canSearch: true,
@@ -15,7 +14,7 @@ const Table = ({data, columns, keyColumn, title, dtKey}) => {
         font: 'Nunito',
         dimensions: {
             datatable: {
-                height: '500px',
+                height: '350px',
                 width: '100%'
             }
         },
@@ -66,7 +65,7 @@ const Table = ({data, columns, keyColumn, title, dtKey}) => {
         if (column.dataType === 'text'){
             val =
                 <div style={{ color: "black", textAlign: "left" }}>
-                    <Link to={`/account/admin/orders/${cellVal}`}>
+                    <Link to={`/account/admin/${prefix}/${cellVal}`}>
                         {cellVal}
                     </Link>
                 </div>
@@ -78,9 +77,11 @@ const Table = ({data, columns, keyColumn, title, dtKey}) => {
 
     return (
         <div style={{marginTop: '25px'}}>
-{            console.log(options)
-}            <Datatable
+            {console.log(options)}
+             <Datatable
                 options={options}
+                dtKey={dtKey}
+                forceRerender={true}
                 CustomTableBodyCell={buildCustomTableBodyCell}
             />
         </div>

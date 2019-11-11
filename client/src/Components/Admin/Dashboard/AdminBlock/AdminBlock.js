@@ -3,9 +3,14 @@ import {Link} from "react-router-dom";
 import classes from "./AdminBlock.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const AdminBlock = ({description, count, linkto, icon}) => {
+const AdminBlock = ({description, count, linkto, icon, data}) => {
     return (
-        <Link to={linkto}>
+        <Link to={{
+            pathname: linkto,
+            state: {
+                data: data ? data : null
+            }
+        }}>
             <div className={classes.card}>
                 <div className={classes.icon}>
                     <FontAwesomeIcon icon={icon} />

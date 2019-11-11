@@ -198,6 +198,7 @@ class Shop extends Component {
     renderProducts = () => (
         this.props.shop.articles.map((product) => (
             <Card
+                role={this.props.user.userData.isAdmin}
                 type={'shop'}
                 image={product.images[0].url}
                 name={product.name}
@@ -205,6 +206,7 @@ class Shop extends Component {
                 price={product.price}
                 linkto={`/shop/${product.type}/${product._id}`}
                 key={product._id}
+                id={product._id}
                 addToCart={() => addToCart(product._id, this.props.isAuth, product.name, product.price, product.images[0].url,`/shop/${product.type}/${product._id}` )}
             />
         ))
@@ -344,7 +346,8 @@ const mapStateToProps = state => {
         shop: state.product,
         brands: state.product.brands,
         materials: state.product.materials,
-        isAuth: state.user.userData.isAuth
+        isAuth: state.user.userData.isAuth,
+        isAdmin: state.user.userData.isAdmin
     }
 };
 

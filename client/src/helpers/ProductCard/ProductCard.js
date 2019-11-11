@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShoppingCart, faHeart} from "@fortawesome/free-solid-svg-icons";
 import StyledButton from "../Button/Button";
-const Card = ({image, name, sub, price, linkto, addToCart, type}) => {
+const Card = ({image, name, sub, price, linkto, addToCart, type, id, role}) => {
     const styles = {
         backgroundImage: `url(${image})`,
         backgroundSize: 'cover',
@@ -53,6 +53,11 @@ const Card = ({image, name, sub, price, linkto, addToCart, type}) => {
                         <div className={classes.buttonContainerShop}>
                             <StyledButton content={'Add to cart'} clicked={addToCart} />
                         </div>
+                        {
+                            role ? <div className={classes.buttonContainerShop}>
+                                <StyledButton content={'Edit'} linkto={`/account/admin/edit_product/${id}`} />
+                            </div> : null
+                        }
                     </div>
                 </div>
             );

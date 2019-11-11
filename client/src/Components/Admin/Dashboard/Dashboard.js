@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import {getOrdersList, getUsersList} from "../../../actions/Admin/adminActions";
 import Loading from "../../../helpers/Loading/Loading";
 import AdminBlock from "./AdminBlock/AdminBlock";
-import {faEdit, faPlus, faTags, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faDollarSign, faPlus, faTags, faUser} from "@fortawesome/free-solid-svg-icons";
 import classes from "./Dashboard.module.css";
 import Table from "./AdminTable/AdminTable";
 import Charts from "./Charts/Charts";
@@ -122,31 +122,41 @@ class AdminDashboard extends Component {
             this.state.loading ? <Loading /> :
                this.props.user.userData.isAdmin ?
                    <AdminLayout>
+                       {console.log(this.state.total)}
                        <div className={classes.container}>
-                           <AdminBlock description={'Users'} count={this.state.usersCount} icon={faUser} linkto={`/account/admin/users`} />
-                           <AdminBlock description={'Orders'} count={this.state.ordersCount} icon={faTags} linkto={`/account/admin/orders`} />
+                           <AdminBlock description={'Users'} count={this.state.usersCount} icon={faUser} linkto={`/account/admin/users`} data={this.state.users}/>
+                           <AdminBlock description={'Orders'} count={this.state.ordersCount} icon={faTags} linkto={`/account/admin/orders`} data={this.state.orders}/>
+                           <AdminBlock description={'Total sales'} icon={faDollarSign} linkto={`/account/admin`} count={this.state.total.total}/>
                            <AdminBlock description={'Add product'} icon={faPlus} linkto={`/account/admin/add_product`} />
-                           <AdminBlock description={'Edit product'} icon={faEdit} linkto={`/account/admin/edit_product`} />
                        </div>
-                       <div className={classes.chartContainer}>
-                           <Charts
-                               revenue={this.state.revenue}
-                               labels={['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']}
-                               type={'line'}
-                               title={'Monthly revenue'}
-                           />
-                       </div>
+                       {/*<div className={classes.chartContainer}>*/}
+
+                       {/*</div>*/}
                            <div className={classes.container}>
                                <div className={classes.ordersContainer}>
+                                   <Charts
+                                       revenue={this.state.revenue}
+                                       labels={['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']}
+                                       type={'line'}
+                                       title={'Monthly revenue'}
+                                   />
+                                   {/*{ this.state.users ?*/}
+                                   {/*    <Table data={this.state.users}*/}
+                                   {/*           columns={this.state.userColumns}*/}
+                                   {/*           keyColumn={"id"} prefix={'user'}*/}
+                                   {/*           title={'User list'} dtKey={'users'}/> : null*/}
+                                   {/*}*/}
+                               </div>
+                               <div className={classes.ordersContainer}>
                                    {
-                                       this.state.orders ? <Table data={this.state.orders.slice(0, 5)} columns={this.state.ordersColumns} keyColumn={"_id"} title={"Newest orders"} dtKey={'orders'}/> : null
+                                       this.state.orders ?
+                                           <Table
+                                               data={this.state.orders.slice(0, 5)}
+                                               columns={this.state.ordersColumns}
+                                               prefix={'order'} keyColumn={"id"}
+                                               title={"Newest orders"} dtKey={'orders'}/> : null
                                    }
                                </div>
-                               {/*<div className={classes.ordersContainer}>*/}
-                               {/*    {*/}
-                               {/*        this.state.users ? <Table data={this.state.users} columns={this.state.userColumns} keyColumn={"_Id"} title={'User list'} dtKey={'users'}/> : null*/}
-                               {/*    }*/}
-                               {/*</div>*/}
                            </div>
                    </AdminLayout>
 

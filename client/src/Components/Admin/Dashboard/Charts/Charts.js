@@ -42,7 +42,6 @@ export default class LineGraph extends Component {
                     let data = chart.config.data;
                     for (let key in revenue) {
                         if (revenue.hasOwnProperty(key) && key !== 'total') {
-                            console.log(data)
                             data.datasets.push({
                                 label: key,
                                 data: [0,0,0,0,0,0,0,0,0,0,0,0],
@@ -70,7 +69,7 @@ export default class LineGraph extends Component {
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
+                maintainAspectRatio: true,
                 title: {
                     display: true,
                     text: title,
