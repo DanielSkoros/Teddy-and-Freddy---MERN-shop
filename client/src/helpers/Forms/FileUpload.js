@@ -12,6 +12,7 @@ class FileUpload extends Component {
     state = {
         uploadedFiles: [],
         uploading: false,
+        isMobile: window.innerWidth <= 768,
     };
 
     onDrop = (files) => {
@@ -41,8 +42,10 @@ class FileUpload extends Component {
             >
                 <div className="wrap" style={{
                     background: `url(${item.url}) no-repeat`,
-                    height: '100px',
-                    width: '100px'
+                    height: this.state.isMobile ? '120px' : '200px',
+                    width: this.state.isMobile ? '120px' : '200px',
+                    backgroundSize: 'cover',
+                    backgroundPosition: '50% 60%'
                 }}>
                 </div>
             </div>
@@ -81,19 +84,20 @@ class FileUpload extends Component {
                     <Dropzone onDrop={this.onDrop} multiple={false} style={{
                         width: '80%',
                         height: '5vh',
-                        margin: 'auto',
+                        margin: '50px auto',
                     }}>
-                        <div className={classes.btn}> Upload files here</div>
+                        <div className={classes.dropzone}>
+                            <FontAwesomeIcon
+                                icon={faPlusCircle}
+                            />
+                            Add photos here
+                        </div>
                     </Dropzone>
+                    <div className={classes.dropzoneSlideshow}>
+                        {this.showUploadedImages()}
+                    </div>
                 </div>
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    margin: '15px auto',
-                    flexWrap: 'wrap'
-                }}>
-                {this.showUploadedImages()}
-                </div>
+
             </div>
         );
     }

@@ -30,6 +30,7 @@ const { Type } = require('./models/Type');
 const { Material } = require('./models/Material');
 const { Product } = require('./models/Product');
 const { Order } = require('./models/Orders');
+const { Todo } = require('./models/Todo');
 
 
 //MIDDLEWARES
@@ -550,6 +551,30 @@ app.post('/api/admin/getUserOrders', auth, admin, (req,res) => {
         }
 
     )
+});
+
+app.get('/api/admin/getTodo', auth, admin, (req,res) => {
+    Todo.find({}, (err, doc) => {
+        if (err) return res.status(400).send(err)
+        return res.status(200).send(doc)
+    })
+});
+
+app.post('/api/admin/addTodo', (req,res) => {
+    const todo = new Todo(req.body);
+    todo.save((err, doc) => {
+        if(err) return res.json({success: false});
+        res.status(200).json({success: true});
+    })
+});
+
+app.delete('/api/admin/deleteTodo', auth, admin, (req,res) => {
+    const {id} = req.query;
+    console.log(id)
+    Todo.deleteOne({_id: id}, (err, doc) => {
+        if(err) return res.json({success: false});
+        res.status(200).json({success: true});
+    })
 });
 
 

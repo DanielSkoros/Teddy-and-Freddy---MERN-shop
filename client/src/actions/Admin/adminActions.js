@@ -3,27 +3,45 @@ import * as actionTypes from './actionTypes';
 import axios from 'axios';
 import {ADMIN_SERVER} from "../../helpers/serverURLs";
 
-export const getUsersCount = () => {
-    const request = axios.get(`${ADMIN_SERVER}/usersCount`)
+export const getTodos = () => {
+    const request = axios.get(`${ADMIN_SERVER}/getTodo`)
         .then(res => res.data)
-        .catch(err => err);
-
+        .catch(err => err)
     return {
-        type: actionTypes.GET_USERS_COUNT,
+        type: actionTypes.GET_TODO,
+        payload: request
+    }
+}
+
+export const addTodo = (todo) => {
+    const data = {
+        todo
+    };
+    const request = axios.post(`${ADMIN_SERVER}/addTodo`, data)
+        .then(res => res.data)
+        .catch(err => err)
+    return {
+        type: actionTypes.ADD_TODO,
         payload: request
     }
 };
 
-export const getOrdersCount = () => {
-    const request = axios.get(`${ADMIN_SERVER}/ordersCount`)
+export const deleteTodo = (id) => {
+    console.log(id)
+    const request = axios.delete(`${ADMIN_SERVER}/deleteTodo`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        params: {id}
+    })
         .then(res => res.data)
-        .catch(err => err);
-
+        .catch(err => err)
     return {
-        type: actionTypes.GET_ORDERS_COUNT,
+        type: actionTypes.DELETE_TODO,
         payload: request
     }
-};
+}
 
 export const getOrdersList = () => {
     const request = axios.get(`${ADMIN_SERVER}/ordersList`)

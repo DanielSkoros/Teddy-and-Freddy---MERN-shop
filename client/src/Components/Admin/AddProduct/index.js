@@ -30,7 +30,7 @@ class AddProduct extends Component {
                 valid: false,
                 touched: false,
                 validationMessage: '',
-                showLabel: false,
+                showLabel: true,
             },
             description: {
                 element: 'textarea',
@@ -48,7 +48,7 @@ class AddProduct extends Component {
                 valid: false,
                 touched: false,
                 validationMessage: '',
-                showLabel: false,
+                showLabel: true,
             },
             price: {
                 element: 'input',
@@ -66,7 +66,7 @@ class AddProduct extends Component {
                 valid: false,
                 touched: false,
                 validationMessage: '',
-                showLabel: false,
+                showLabel: true,
             },
             brand: {
                 element: 'select',
@@ -304,62 +304,73 @@ class AddProduct extends Component {
             <div className={classes.formContainer}>
                 <h1>Add product</h1>
                 <form onSubmit={(event) => this.onSubmit(event)}>
-                    <FormField
-                        id={'name'}
-                        formData={this.state.formData.name}
-                        change={element => this.onChange(element)}
-                    />
-                    <FormField
-                        id={'description'}
-                        formData={this.state.formData.description}
-                        change={element => this.onChange(element)}
-                    />
-                    <FormField
-                        id={'price'}
-                        formData={this.state.formData.price}
-                        change={element => this.onChange(element)}
-                    />
-                    <FormField
-                        id={'brand'}
-                        formData={this.state.formData.brand}
-                        change={element => this.onChange(element)}
-                    />
-                    <FormField
-                        id={'material'}
-                        formData={this.state.formData.material}
-                        change={element => this.onChange(element)}
-                    />
-                    <FormField
-                        id={'type'}
-                        formData={this.state.formData.type}
-                        change={element => this.onChange(element)}
-                    />
-                    <FormField
-                        id={'shipping'}
-                        formData={this.state.formData.shipping}
-                        change={element => this.onChange(element)}
-                    />
-                    <FormField
-                        id={'available'}
-                        formData={this.state.formData.available}
-                        change={element => this.onChange(element)}
-                    />
-                    <FormField
-                        id={'publish'}
-                        formData={this.state.formData.publish}
-                        change={element => this.onChange(element)}
-                    />
-                    {this.state.formError ?
-                        <div className={"error_label"}>
-                            Please check your data
+                    <div className={classes.formLayout}>
+                        <div>
+                            <FormField
+                                id={'name'}
+                                formData={this.state.formData.name}
+                                change={element => this.onChange(element)}
+                            />
+                            <FormField
+                                id={'description'}
+                                formData={this.state.formData.description}
+                                change={element => this.onChange(element)}
+                            />
+                            <FormField
+                                id={'price'}
+                                formData={this.state.formData.price}
+                                change={element => this.onChange(element)}
+                            />
                         </div>
-                        :null }
-                    {this.state.formSuccess ?
-                        <div className={"form_success"}>Success</div>
-                        :null}
-
-                        <FileUpload imageHandler={this.imagesHandler}/>
-                    <StyledButton onClick={(event) => this.onSubmit(event)} content={'Add product'}/>
+                        <div>
+                            <FormField
+                                id={'brand'}
+                                formData={this.state.formData.brand}
+                                change={element => this.onChange(element)}
+                            />
+                            <FormField
+                                id={'material'}
+                                formData={this.state.formData.material}
+                                change={element => this.onChange(element)}
+                            />
+                            <FormField
+                                id={'type'}
+                                formData={this.state.formData.type}
+                                change={element => this.onChange(element)}
+                            />
+                        </div>
+                        <div>
+                            <FormField
+                                id={'shipping'}
+                                formData={this.state.formData.shipping}
+                                change={element => this.onChange(element)}
+                            />
+                            <FormField
+                                id={'available'}
+                                formData={this.state.formData.available}
+                                change={element => this.onChange(element)}
+                            />
+                            <FormField
+                                id={'publish'}
+                                formData={this.state.formData.publish}
+                                change={element => this.onChange(element)}
+                            />
+                        </div>
+                        {this.state.formError ?
+                            <div className={"error_label"}>
+                                Please check your data
+                            </div>
+                            :null }
+                        {this.state.formSuccess ?
+                            <div className={"form_success"}>Success</div>
+                            :null}
+                    </div>
+                        <div className={classes.dropzone}>
+                            <FileUpload imageHandler={this.imagesHandler}/>
+                        </div>
+                    <div className={classes.btn}>
+                        <StyledButton onClick={(event) => this.onSubmit(event)} content={'Add product'}/>
+                    </div>
                 </form>
             </div>
             </AdminLayout>

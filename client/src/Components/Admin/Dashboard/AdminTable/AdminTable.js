@@ -3,10 +3,11 @@ import { Datatable } from "@o2xp/react-datatable";
 import {Link} from "react-router-dom";
 
 
-const Table = ({data}) => {
+const Table = ({data, columns, keyColumn, title, dtKey}) => {
     let options = {
-        keyColumn: "id",
-        title: "Newest orders",
+        keyColumn: keyColumn,
+        dtKey: dtKey,
+        title: title,
         features: {
             canSearch: true,
             canOrderColumns: true,
@@ -20,33 +21,7 @@ const Table = ({data}) => {
         },
         data: {
             columns: [
-                {
-                    id: "_id",
-                    label: "Order ID",
-                    colSize: "80px",
-                    dataType: "text"
-                },
-                {
-                    id: "name",
-                    label: "First name",
-                    colSize: "50px"
-                },
-                {
-                    id: "lastName",
-                    label: "Last name",
-                    colSize: "50px",
-                },
-                {
-                    id: "createdAt",
-                    label: "Date",
-                    colSize: "100px",
-                    dataType: "date"
-                },
-                {
-                    id: "status",
-                    label: "Status",
-                    colSize: "80px"
-                },
+                ...columns
             ],
             rows: [
                 ...data
@@ -103,7 +78,8 @@ const Table = ({data}) => {
 
     return (
         <div style={{marginTop: '25px'}}>
-            <Datatable
+{            console.log(options)
+}            <Datatable
                 options={options}
                 CustomTableBodyCell={buildCustomTableBodyCell}
             />

@@ -19,6 +19,53 @@ class AdminDashboard extends Component {
         ordersCount: 0,
         total: 0,
         revenue: null,
+        ordersColumns: [
+            {
+                id: "_id",
+                label: "Order ID",
+                colSize: "80px",
+                dataType: "text"
+            },
+            {
+                id: "name",
+                label: "First name",
+                colSize: "50px"
+            },
+            {
+                id: "lastName",
+                label: "Last name",
+                colSize: "50px",
+            },
+            {
+                id: "createdAt",
+                label: "Date",
+                colSize: "100px",
+                dataType: "date"
+            },
+            {
+                id: "status",
+                label: "Status",
+                colSize: "80px"
+            },
+        ],
+        userColumns: [
+            {
+                id: "_id",
+                label: "User ID",
+                colSize: "80px",
+                dataType: "text"
+            },
+            {
+                id: "name",
+                label: "First name",
+                colSize: "50px"
+            },
+            {
+                id: "lastName",
+                label: "Last name",
+                colSize: "50px",
+            },
+        ]
     };
 
     componentDidMount() {
@@ -81,11 +128,6 @@ class AdminDashboard extends Component {
                            <AdminBlock description={'Add product'} icon={faPlus} linkto={`/account/admin/add_product`} />
                            <AdminBlock description={'Edit product'} icon={faEdit} linkto={`/account/admin/edit_product`} />
                        </div>
-                           <div className={classes.ordersContainer}>
-                               {
-                                   this.state.orders ? <Table data={this.state.orders.slice(0, 5)}/> : null
-                               }
-                           </div>
                        <div className={classes.chartContainer}>
                            <Charts
                                revenue={this.state.revenue}
@@ -94,6 +136,18 @@ class AdminDashboard extends Component {
                                title={'Monthly revenue'}
                            />
                        </div>
+                           <div className={classes.container}>
+                               <div className={classes.ordersContainer}>
+                                   {
+                                       this.state.orders ? <Table data={this.state.orders.slice(0, 5)} columns={this.state.ordersColumns} keyColumn={"_id"} title={"Newest orders"} dtKey={'orders'}/> : null
+                                   }
+                               </div>
+                               {/*<div className={classes.ordersContainer}>*/}
+                               {/*    {*/}
+                               {/*        this.state.users ? <Table data={this.state.users} columns={this.state.userColumns} keyColumn={"_Id"} title={'User list'} dtKey={'users'}/> : null*/}
+                               {/*    }*/}
+                               {/*</div>*/}
+                           </div>
                    </AdminLayout>
 
                    : null

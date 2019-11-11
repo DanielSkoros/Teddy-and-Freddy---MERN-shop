@@ -37,6 +37,21 @@ export default function (state = [], action) {
                 ...state,
                 userOrders: action.payload
             };
+        case(actionTypes.ADD_TODO):
+            return {
+                ...state,
+                success: action.payload,
+            };
+        case(actionTypes.DELETE_TODO):
+            return {
+                ...state,
+                success: action.payload
+            };
+        case(actionTypes.GET_TODO):
+            return {
+                ...state,
+                todos: action.payload
+            };
         default: return state;
     }
 }

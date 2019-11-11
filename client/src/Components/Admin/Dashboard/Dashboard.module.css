@@ -17,11 +17,12 @@
     .container {
         flex-direction: row;
     }
-    .ordersContainer, .chartContainer {
-        width: 80%;
+    .ordersContainer {
+        width: 45%;
     }
 
     .chartContainer {
         height: 350px;
+        width: 80%;
     }
 }
