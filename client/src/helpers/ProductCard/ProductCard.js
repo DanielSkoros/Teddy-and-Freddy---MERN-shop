@@ -11,6 +11,7 @@ const Card = ({image, name, sub, price, linkto, addToCart, type, id, role}) => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 60%'
     };
+
     switch(type){
         case('landing'):
             return (

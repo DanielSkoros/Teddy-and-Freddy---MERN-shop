@@ -51,15 +51,19 @@
     cursor: pointer;
 }
 
+.image {
+   position: relative;
+}
+
 .image img {
     width: 50px;
     height: 55px;
 }
 
 .description {
+    position: relative;
     padding-left: 40px;
     font-size: 16px;
-    line-height: 36px;
 }
 
 .description p {
@@ -69,6 +73,8 @@
 
 .totalPrice {
     font-size: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @media screen and (min-width: 768px){

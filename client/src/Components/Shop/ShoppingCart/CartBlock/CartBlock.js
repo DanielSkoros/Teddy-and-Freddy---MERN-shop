@@ -21,7 +21,7 @@ const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOn
 
                     <div className={classes.description}>
                         <Link to={linkto}>
-                            <p>{name}</p>
+                            {name}
                         </Link>
                         <div className={classes.totalPrice}>{count} x ${price}</div>
                     </div>
@@ -42,7 +42,7 @@ const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOn
                 <div className={classes.item}>
                     <div className={classes.description}>
                         <Link to={linkto}>
-                            <p>{name}</p>
+                            {name}
                         </Link>
                         <div className={classes.totalPrice}>{count} x ${price}</div>
                     </div>

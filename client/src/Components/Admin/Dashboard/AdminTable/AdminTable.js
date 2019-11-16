@@ -81,7 +81,6 @@ const Table = ({data, columns, keyColumn, title, dtKey, prefix}) => {
              <Datatable
                 options={options}
                 dtKey={dtKey}
-                forceRerender={true}
                 CustomTableBodyCell={buildCustomTableBodyCell}
             />
         </div>

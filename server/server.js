@@ -198,6 +198,8 @@ app.get('/api/product/articles/:type',(req,res)=>{
     })
 });
 
+
+
 app.post('/api/product/shop',(req,res)=>{
 
     let order = req.body.order ? req.body.order : "-1";
@@ -246,6 +248,21 @@ app.post('/api/product/article',auth,admin,(req,res)=>{
         })
     })
 });
+
+app.post('/api/product/edit_product/:id', auth, admin, (req, res) => {
+    console.log(req.params)
+    Product.findOneAndUpdate({_id: req.params.id},
+        req.body,
+        {new: true},
+        (err, doc) => {
+        if(err) return res.status(200).send(err)
+            return res.status(200).json({
+                success: true,
+                editedArticle: doc
+            })
+        }
+        )
+})
 
 app.post('/api/product/shop',(req,res)=>{
 
@@ -551,30 +568,6 @@ app.post('/api/admin/getUserOrders', auth, admin, (req,res) => {
         }
 
     )
-});
-
-app.get('/api/admin/getTodo', auth, admin, (req,res) => {
-    Todo.find({}, (err, doc) => {
-        if (err) return res.status(400).send(err)
-        return res.status(200).send(doc)
-    })
-});
-
-app.post('/api/admin/addTodo', (req,res) => {
-    const todo = new Todo(req.body);
-    todo.save((err, doc) => {
-        if(err) return res.json({success: false});
-        res.status(200).json({success: true});
-    })
-});
-
-app.delete('/api/admin/deleteTodo', auth, admin, (req,res) => {
-    const {id} = req.query;
-    console.log(id)
-    Todo.deleteOne({_id: id}, (err, doc) => {
-        if(err) return res.json({success: false});
-        res.status(200).json({success: true});
-    })
 });
 
 

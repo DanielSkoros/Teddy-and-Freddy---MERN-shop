@@ -122,30 +122,28 @@ class AdminDashboard extends Component {
             this.state.loading ? <Loading /> :
                this.props.user.userData.isAdmin ?
                    <AdminLayout>
-                       {console.log(this.state.total)}
                        <div className={classes.container}>
                            <AdminBlock description={'Users'} count={this.state.usersCount} icon={faUser} linkto={`/account/admin/users`} data={this.state.users}/>
                            <AdminBlock description={'Orders'} count={this.state.ordersCount} icon={faTags} linkto={`/account/admin/orders`} data={this.state.orders}/>
                            <AdminBlock description={'Total sales'} icon={faDollarSign} linkto={`/account/admin`} count={this.state.total.total}/>
                            <AdminBlock description={'Add product'} icon={faPlus} linkto={`/account/admin/add_product`} />
                        </div>
-                       {/*<div className={classes.chartContainer}>*/}
-
-                       {/*</div>*/}
+                       <div className={classes.chartContainer}>
+                           <Charts
+                               revenue={this.state.revenue}
+                               labels={['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']}
+                               type={'line'}
+                               title={'Monthly revenue'}
+                           />
+                       </div>
                            <div className={classes.container}>
                                <div className={classes.ordersContainer}>
-                                   <Charts
-                                       revenue={this.state.revenue}
-                                       labels={['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']}
-                                       type={'line'}
-                                       title={'Monthly revenue'}
-                                   />
-                                   {/*{ this.state.users ?*/}
-                                   {/*    <Table data={this.state.users}*/}
-                                   {/*           columns={this.state.userColumns}*/}
-                                   {/*           keyColumn={"id"} prefix={'user'}*/}
-                                   {/*           title={'User list'} dtKey={'users'}/> : null*/}
-                                   {/*}*/}
+                                   { this.state.users ?
+                                       <Table data={this.state.users}
+                                              columns={this.state.userColumns}
+                                              keyColumn={"id"} prefix={'user'}
+                                              title={'User list'} dtKey={'users'}/> : null
+                                   }
                                </div>
                                <div className={classes.ordersContainer}>
                                    {

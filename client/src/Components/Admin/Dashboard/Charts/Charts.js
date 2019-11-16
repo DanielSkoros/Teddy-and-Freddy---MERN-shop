@@ -69,7 +69,7 @@ export default class LineGraph extends Component {
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: true,
+                maintainAspectRatio: false,
                 title: {
                     display: true,
                     text: title,

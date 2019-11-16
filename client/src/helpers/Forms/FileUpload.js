@@ -10,7 +10,7 @@ import StyledButton from "../Button/Button";
 
 class FileUpload extends Component {
     state = {
-        uploadedFiles: [],
+        uploadedFiles: this.props.images || [],
         uploading: false,
         isMobile: window.innerWidth <= 768,
     };

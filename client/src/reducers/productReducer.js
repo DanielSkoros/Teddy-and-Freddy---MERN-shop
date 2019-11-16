@@ -22,6 +22,11 @@ export default function (state = [], action){
                 ...state,
                 product: action.payload
             };
+        case(actionTypes.EDIT_PRODUCT):
+            return {
+                ...state,
+                editedProduct: action.payload
+            };
         case(actionTypes.GET_PRODUCTS):
             return {
                 ...state,

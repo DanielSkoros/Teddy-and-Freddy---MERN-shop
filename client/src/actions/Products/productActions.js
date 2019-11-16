@@ -12,15 +12,6 @@ export const getBrands = () => {
   }
 };
 
-export const getTypes = () => {
-    const request = axios.get(`${PRODUCT_SERVER}/types`)
-        .then(res => res.data);
-    return {
-        type: actionTypes.GET_TYPES,
-        payload: request
-    }
-};
-
 export const getMaterials = () => {
     const request = axios.get(`${PRODUCT_SERVER}/materials`)
         .then(res => res.data);
@@ -38,6 +29,16 @@ export const addProduct = data => {
         payload: request
     }
 };
+
+export const editProduct = (data, id) => {
+    console.log(data, id)
+    const request = axios.post(`${PRODUCT_SERVER}/edit_product/${id}`, data)
+        .then(res => res.data);
+    return {
+        type: actionTypes.EDIT_PRODUCT,
+        payload: request
+    }
+}
 
 export const getProductsByType = (filters, skip, limit, sortBy, order, prevState = []) => {
     const data = {

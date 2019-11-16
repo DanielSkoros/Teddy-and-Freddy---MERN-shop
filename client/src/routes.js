@@ -17,6 +17,7 @@ import AdminDashboard from "./Components/Admin/Dashboard/Dashboard";
 import Users from "./Components/Admin/Users/Users";
 import UserDetail from "./Components/Admin/Users/UserDetail/UserDetail";
 import Page404 from "./helpers/404/page404";
+import EditProduct from "./Components/Admin/EditProduct/EditProduct";
 const Routes = () => {
 
   return (
@@ -34,6 +35,7 @@ const Routes = () => {
 
 
         <Route exact path={'/account/admin/add_product'} component={Auth(AddProduct, true, true)} />
+        <Route exact path={'/account/admin/edit_product/:id'} component={Auth(EditProduct, true, true)} />
         <Route exact path={'/account/admin/users'} component={Auth(Users, true, true)} />
         <Route exact path={'/account/admin/user/:id'} component={Auth(UserDetail, true, true)} />
         <Route exact path={'/account/admin'} component={Auth(AdminDashboard, true, true)} />
