@@ -3,6 +3,8 @@ import ProductCard from '../../../helpers/ProductCard/ProductCard'
 import classes from './NewArrivals.module.css'
 import {debounce} from "../../../helpers/misc";
 import Swipe from "react-easy-swipe";
+import {addToCart} from "../../../helpers/ShopMethods/methods";
+import {connect} from "react-redux";
 class NewArrivals extends Component {
 
     state = {
@@ -40,6 +42,8 @@ class NewArrivals extends Component {
 
 
     render() {
+        console.log(this.props)
+
         return (
             <div className={classes.wrapper}>
                     <p className={classes.heading}>
@@ -47,8 +51,19 @@ class NewArrivals extends Component {
                     </p>
                     <div className={classes.productsContainer}>
                         {
-                            this.state.products.map((product, i) => (
-                                <ProductCard type={'landing'} key={i} name={product.name} sub={product.sub} price={product.price} image={product.image} linkto={product.linkto} />
+                            this.props.data.articles.map((product) => (
+                                <ProductCard
+                                    role={this.props.isAdmin}
+                                    type={'landing'}
+                                    image={product.images[0].url}
+                                    name={product.name}
+                                    sub={product.description}
+                                    price={product.price}
+                                    linkto={`/shop/${product.type}/${product._id}`}
+                                    key={product._id}
+                                    id={product._id}
+                                    addToCart={() => addToCart(product._id, this.props.isAuth, product.name, product.price, product.images[0].url,`/shop/${product.type}/${product._id}` )}
+                                />
                             ))
                         }
                     </div>
@@ -57,4 +72,11 @@ class NewArrivals extends Component {
     }
 }
 
-export default NewArrivals;
+const mapStateToProps = state => {
+    return {
+        isAuth: state.user.userData.isAuth,
+        isAdmin: state.user.userData.isAdmin
+    }
+};
+
+export default connect(mapStateToProps)(NewArrivals);

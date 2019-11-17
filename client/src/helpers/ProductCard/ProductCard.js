@@ -39,11 +39,11 @@ const Card = ({image, name, sub, price, linkto, addToCart, type, id, role}) => {
                     </div>
                     <div className={classes.infoContainer}>
                         <p>
-                            <span> {name} <br/></span>
-                            {sub} <br/>
+                            <span> {name.trunc(20, true)} <br/></span>
+                            {sub.trunc(20,true)} <br/>
                             <span>${price} </span>
                         </p>
-                        <div className={classes.buttonContainer}>
+                        <div className={classes.buttonContainer} onClick={() => alert.show('Product added', {type: 'success'})}>
                             <StyledButton content={'Add to cart'} clicked={addToCart} />
                         </div>
                     </div>

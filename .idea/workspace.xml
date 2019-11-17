@@ -7,41 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba57b4d1-1385-49a3-b5a5-5fdef7f48f4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/Group 7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/Group 8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/NoPath — kopia (10)@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/NoPath@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/body.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/delete-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/landing1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/landing2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/landing3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/login1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/logo_sm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/new1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/new1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/new2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/new2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/new3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/page404.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/small.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/teddy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/images/upArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/precache-manifest.127e4412a7c76e4acc8639d48f16370b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/css/main.ea54ea8d.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/css/main.ea54ea8d.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.9b29f939.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.9b29f939.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/main.24930a90.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/main.24930a90.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/runtime~main.e38743dc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/runtime~main.e38743dc.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Landing/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Landing/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Landing/NewArrivals/NewArrivals.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Landing/NewArrivals/NewArrivals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Shop/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Shop/Shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpers/ProductCard/ProductCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/ProductCard/ProductCard.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,6 +25,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/Components/Landing/Landing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/Components/Landing/NewArrivals/NewArrivals.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="932">
+              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/helpers/ProductCard/ProductCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="45" column="127" selection-start-line="45" selection-start-column="127" selection-end-line="45" selection-end-column="127" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
@@ -64,64 +70,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/client/src/Components/Shop/Shop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="12" selection-start-line="4" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="460" column="34" lean-forward="true" selection-start-line="460" selection-start-column="34" selection-end-line="460" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_154 waves.zip/waves/server/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1340">
-              <caret line="485" column="40" lean-forward="true" selection-start-line="485" selection-end-line="486" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Procfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="3860">
+              <caret line="333" column="27" lean-forward="true" selection-start-line="333" selection-start-column="27" selection-end-line="333" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,8 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/Components/Header_footer/header/header.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/Admin/actionTypes.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/adminReducer.js" />
         <option value="$PROJECT_DIR$/server/models/Todo.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Admin/ToDo/block.js" />
@@ -177,7 +130,6 @@
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Users/UserDetail/UserDetail.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Dashboard/AdminTable/AdminTableReplacement.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Users/Users.js" />
-        <option value="$PROJECT_DIR$/client/src/Components/Shop/Shop.js" />
         <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Dashboard/Charts/Charts.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Dashboard/Dashboard.module.css" />
@@ -203,7 +155,6 @@
         <option value="$PROJECT_DIR$/client/src/Components/Shop/Product page/ProductPage.module.css" />
         <option value="$PROJECT_DIR$/client/src/Components/Header_footer/header/header.module.css" />
         <option value="$PROJECT_DIR$/client/src/helpers/ProductCard/ProductCard.module.css" />
-        <option value="$PROJECT_DIR$/client/src/helpers/ProductCard/ProductCard.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Shop/Product page/ProductPage.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Dashboard/Dashboard.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Header_footer/header/Navbar.js" />
@@ -216,6 +167,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/.gitignore" />
         <option value="$PROJECT_DIR$/client/public/index.html" />
+        <option value="$PROJECT_DIR$/client/src/Components/Shop/Shop.js" />
+        <option value="$PROJECT_DIR$/client/src/Components/Landing/Landing.js" />
+        <option value="$PROJECT_DIR$/client/src/Components/Landing/NewArrivals/NewArrivals.js" />
+        <option value="$PROJECT_DIR$/client/src/helpers/ProductCard/ProductCard.js" />
       </list>
     </option>
   </component>
@@ -251,6 +206,50 @@
               <item name="Portfolio shop" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Portfolio shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Portfolio shop" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Portfolio shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Portfolio shop" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Portfolio shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Portfolio shop" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Landing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Portfolio shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Portfolio shop" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Portfolio shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Portfolio shop" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Portfolio shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Portfolio shop" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductCard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Portfolio shop" type="b2602c69:ProjectViewProjectNode" />
@@ -333,20 +332,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/Components/Admin/Dashboard/Dashboard.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/Shop/ShoppingCart/CartBlock/CartBlock.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/Admin/AddProduct/index.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -471,17 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/Shop/Shop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1494">
-          <caret line="349" column="44" selection-start-line="349" selection-start-column="44" selection-end-line="349" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#820#4426#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -593,16 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/helpers/ProductCard/ProductCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1038">
-          <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Components/Shop/Product page/ProductPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
@@ -681,13 +645,6 @@
         <state relative-caret-position="-3384" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -716,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -744,6 +694,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/Landing/Landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/Landing/NewArrivals/NewArrivals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="932">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/Shop/Shop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3860">
+          <caret line="333" column="27" lean-forward="true" selection-start-line="333" selection-start-column="27" selection-end-line="333" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/helpers/ProductCard/ProductCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="45" column="127" selection-start-line="45" selection-start-column="127" selection-end-line="45" selection-end-column="127" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>
