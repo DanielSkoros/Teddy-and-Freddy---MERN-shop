@@ -2,11 +2,15 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/server/models/Brand.js" line="0" />
-    <bookmark url="file://$PROJECT_DIR$/server/server.js" line="135" />
+    <bookmark url="file://$PROJECT_DIR$/server/server.js" line="137" />
     <bookmark url="file://$PROJECT_DIR$/client/src/helpers/Forms/FileUpload.js" line="12" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba57b4d1-1385-49a3-b5a5-5fdef7f48f4d" name="Default Changelist" comment="" />
+    <list default="true" id="ba57b4d1-1385-49a3-b5a5-5fdef7f48f4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -42,9 +46,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="38" selection-start-line="4" selection-end-line="4" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -115,6 +141,8 @@
       <find>add</find>
       <find>article</find>
       <find>regist</find>
+      <find>DATABASE</find>
+      <find>SECRET</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,8 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/Components/Landing/Landing.module.css" />
-        <option value="$PROJECT_DIR$/client/src/Components/Admin/Dashboard/AdminBlock/AdminBlock.module.css" />
         <option value="$PROJECT_DIR$/client/src/helpers/Loading/Loading.module.css" />
         <option value="$PROJECT_DIR$/client/src/Components/User/Orders/OrderBlock.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Dashboard/AdminTable/AdminTable.module.css" />
@@ -161,7 +187,6 @@
         <option value="$PROJECT_DIR$/client/src/Components/Register/Register.js" />
         <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/client/src/routes.js" />
-        <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Dashboard/AdminTable/AdminTable.js" />
         <option value="$PROJECT_DIR$/client/src/Components/User/Orders/Orders.js" />
         <option value="$PROJECT_DIR$/client/src/helpers/Carousel/Slide/slide.module.css" />
@@ -174,6 +199,9 @@
         <option value="$PROJECT_DIR$/client/src/Components/Admin/Dashboard/Dashboard.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Header_footer/header/Navbar.js" />
         <option value="$PROJECT_DIR$/client/src/Components/Header_footer/header/sidebar.js" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/server/server.js" />
       </list>
     </option>
   </component>
@@ -325,6 +353,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.6.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -392,7 +421,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/Components/Admin/ToDo/block.js" />
     <entry file="file://$PROJECT_DIR$/client/src/Components/Admin/ToDo/ToDo.js" />
     <entry file="file://$PROJECT_DIR$/client/src/reducers/adminReducer.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -660,13 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="373" column="24" selection-start-line="373" selection-start-column="24" selection-end-line="373" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
@@ -810,8 +831,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="38" selection-start-line="4" selection-end-line="4" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
