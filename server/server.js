@@ -6,7 +6,6 @@ const app = express();
 const mongoose = require('mongoose');
 const formidable = require('express-formidable');
 const cloudinary = require('cloudinary');
-const async = require('async');
 const path = require('path');
 
 
