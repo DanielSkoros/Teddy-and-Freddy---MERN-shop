@@ -2,8 +2,19 @@ import React from 'react';
 import classes from './ProductCard.module.css'
 import { Link } from 'react-router-dom'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faShoppingCart, faHeart} from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useAlert } from 'react-alert';
 import StyledButton from "../Button/Button";
+
+String.prototype.trunc =
+    function( n, useWordBoundary ){
+        if (this.length <= n) { return this; }
+        let subString = this.substr(0, n-1);
+        return (useWordBoundary
+            ? subString.substr(0, subString.lastIndexOf(' '))
+            : subString) + " ...";
+    };
+
 const Card = ({image, name, sub, price, linkto, addToCart, type, id, role}) => {
     const styles = {
         backgroundImage: `url(${image})`,
@@ -11,7 +22,7 @@ const Card = ({image, name, sub, price, linkto, addToCart, type, id, role}) => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 60%'
     };
-
+    const alert = useAlert();
     switch(type){
         case('landing'):
             return (
@@ -47,11 +58,11 @@ const Card = ({image, name, sub, price, linkto, addToCart, type, id, role}) => {
                     </Link>
                     <div className={classes.infoContainerShop}>
                         <p>
-                            <span> {name} <br/></span>
-                            {sub} <br/>
+                            <span> {name.trunc(20, true)} <br/></span>
+                            {sub.trunc(20,true)} <br/>
                             <span>${price} </span>
                         </p>
-                        <div className={classes.buttonContainerShop}>
+                        <div className={classes.buttonContainerShop} onClick={() => alert.show('Product added', {type: 'success'})}>
                             <StyledButton content={'Add to cart'} clicked={addToCart} />
                         </div>
                         {

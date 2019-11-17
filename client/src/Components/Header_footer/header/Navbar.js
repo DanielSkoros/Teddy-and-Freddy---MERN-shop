@@ -8,16 +8,16 @@ import Logo from "./Logo";
 const Navbar = (props) => {
     const adminLinks = [
         {
+            name: 'Home',
+            linkto: '/'
+        },
+        {
             name: 'Dashboard',
-            linkto: '/user/dashboard'
+            linkto: '/account/admin'
         },
         {
             name: 'Add product',
             linkto: '/account/admin/add_product'
-        },
-        {
-            name: 'Edit product',
-            linkto: '/account/admin/edit_product'
         },
         {
             name: 'Orders',

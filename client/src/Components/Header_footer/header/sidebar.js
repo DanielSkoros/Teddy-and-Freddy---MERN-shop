@@ -10,6 +10,10 @@ import classes from "./sidebar.module.css";
 
 const Sidebar = (props) => {
     const adminLinks = [
+        {
+            name: 'Home',
+            linkto: '/'
+        },
             {
                 name: 'Dashboard',
                 linkto: '/account/admin'
@@ -17,10 +21,6 @@ const Sidebar = (props) => {
             {
                 name: 'Add product',
                 linkto: '/account/admin/add_product'
-            },
-            {
-                name: 'Edit product',
-                linkto: '/account/admin/edit_product'
             },
             {
                 name: 'Orders',

@@ -111,16 +111,16 @@ class Register extends Component {
         event.preventDefault();
         const dataToSubmit = generateData(this.state.formData, 'register');
         const formIsValid = isFormValid(this.state.formData, 'register');
-
         if(formIsValid) {
             this.props.dispatch(userRegister(dataToSubmit))
                 .then(res => {
+                    console.log(res)
                     if (res.payload.success){
                         this.setState({
                             formError: false,
                             formSuccess: true
                         });
-                        setTimeout(() => this.props.history.push('/account/login'), 3000)
+                        setTimeout(this.props.changeType, 500)
                     }else {
                         this.setState({
                             formError: true,

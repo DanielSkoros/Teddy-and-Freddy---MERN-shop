@@ -31,7 +31,7 @@ const Routes = () => {
         <Route exact path={'/user/checkout'} component={Auth(Checkout, null, false)}/>
         <Route exact path={'/user/checkout/payment'} component={Auth(Payment, null, false)} />
         <Route exact path={'/user/dashboard'} component={Auth(Dashboard, false)} />
-        <Route exact path={'/user/orders'} component={Auth(Orders, false)} />
+        <Route exact path={'/user/orders'} component={Auth(Orders, true, false)} />
 
 
         <Route exact path={'/account/admin/add_product'} component={Auth(AddProduct, true, true)} />

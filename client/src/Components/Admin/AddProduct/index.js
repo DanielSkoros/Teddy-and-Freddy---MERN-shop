@@ -8,9 +8,11 @@ import FileUpload from "../../../helpers/Forms/FileUpload";
 import {generateData, isFormValid, updateForm, populateOptionFields, resetFields} from "../../../helpers/Forms/formActions";
 import {addProduct, getBrands, getMaterials} from "../../../actions/Products/productActions";
 import {connect} from "react-redux";
+import Alert from "../../../helpers/Alert";
 
 class AddProduct extends Component {
     state = {
+        editSuccess: false,
         formError: false,
         formSuccess: false,
         formData: {
@@ -283,7 +285,17 @@ class AddProduct extends Component {
         if(formIsValid) {
             this.props.dispatch(addProduct(dataToSubmit)).then(res => {
                 if(res.payload.success){
-                    this.resetFieldsHandler();
+                    this.setState({
+                        editSuccess: true
+                    }, () => {
+                        setTimeout(() => {
+                            this.setState({
+                                editSuccess: false
+                            });
+                            this.resetFieldsHandler();
+                        }, 5000)
+                    });
+
                 }else {
                     this.setState({
                         formError: true,
@@ -371,6 +383,11 @@ class AddProduct extends Component {
                     <div className={classes.btn}>
                         <StyledButton onClick={(event) => this.onSubmit(event)} content={'Add product'}/>
                     </div>
+                    {
+                        this.state.editSuccess ?
+                            <Alert type={'success'} text={'Product added'} />
+                            : null
+                    }
                 </form>
             </div>
             </AdminLayout>

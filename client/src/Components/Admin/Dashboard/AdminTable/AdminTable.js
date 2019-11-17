@@ -3,7 +3,7 @@ import { Datatable } from "@o2xp/react-datatable";
 import {Link} from "react-router-dom";
 
 
-const Table = ({data, columns, keyColumn, title, dtKey, prefix}) => {
+const Table = ({data, columns, keyColumn, title, dtKey, prefix, locationData}) => {
     let options = {
         keyColumn: keyColumn,
         title: title,
@@ -65,7 +65,12 @@ const Table = ({data, columns, keyColumn, title, dtKey, prefix}) => {
         if (column.dataType === 'text'){
             val =
                 <div style={{ color: "black", textAlign: "left" }}>
-                    <Link to={`/account/admin/${prefix}/${cellVal}`}>
+                    <Link to={{
+                        pathname: `/${prefix}/${cellVal}`,
+                        state: {
+                            locationData
+                        }
+                    }}>
                         {cellVal}
                     </Link>
                 </div>
@@ -77,7 +82,6 @@ const Table = ({data, columns, keyColumn, title, dtKey, prefix}) => {
 
     return (
         <div style={{marginTop: '25px'}}>
-            {console.log(options)}
              <Datatable
                 options={options}
                 dtKey={dtKey}

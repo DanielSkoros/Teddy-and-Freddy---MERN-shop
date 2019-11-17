@@ -22,18 +22,26 @@ class ProductPage extends Component {
         return (
             this.state.loading ? <Loading /> :
                 <Layout>
-                    <div className={classes.productContainer}>
-                        <ImageScroller images={item.images} />
-                        <StyledButton content={'Add to cart'} clicked={() => addToCart(item._id)}/>
+                    <div className={classes.heading}>
+                        <div>
+                            <p>{item.name}</p>
+                        </div>
+                        <div>
+                            <p>${item.price}</p>
+                        </div>
                     </div>
-                    <div className={classes.descriptionContainer}>
-                        <span>Name: </span>
-                        <p>{item.name}</p>
-                        <span>Description: </span>
-                        <p>{item.description}</p>
-                        <span>Price: </span>
-                        <p>{item.price}$</p>
-                    </div>
+                   <div className={classes.pageContainer}>
+                       <div className={classes.productContainer}>
+                           <div className={classes.imageContainer}>
+                               <ImageScroller images={item.images} />
+                           </div>
+                       </div>
+                       <div className={classes.descriptionContainer}>
+                           <span>Description: </span>
+                           <p>{item.description}</p>
+                           <StyledButton content={'Add to cart'} clicked={() => addToCart(item._id)}/>
+                       </div>
+                   </div>
                 </Layout>
         );
     }

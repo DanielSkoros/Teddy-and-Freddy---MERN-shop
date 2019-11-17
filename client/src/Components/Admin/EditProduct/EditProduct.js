@@ -295,6 +295,10 @@ class EditProduct extends Component {
                 if(res.payload.success){
                     this.setState({
                         editSuccess: true
+                    }, () => {
+                        setTimeout(() => this.setState({
+                            editSuccess: false,
+                        }), 5000)
                     })
                 }else {
                     this.setState({
@@ -387,10 +391,7 @@ class EditProduct extends Component {
                             </div>
                             {
                                 this.state.editSuccess ?
-                                    <img src={'/'} style={{display: 'none'}} onLoad={() => {
-                                        alert.show('Oh look, an alert!')
-                                    }}/>
-
+                                    <Alert type={'success'} text={'Changes saved'} />
                                         : null
                             }
                         </form>

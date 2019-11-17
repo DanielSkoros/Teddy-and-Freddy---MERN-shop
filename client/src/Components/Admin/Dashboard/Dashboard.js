@@ -137,21 +137,21 @@ class AdminDashboard extends Component {
                            />
                        </div>
                            <div className={classes.container}>
-                               <div className={classes.ordersContainer}>
-                                   { this.state.users ?
-                                       <Table data={this.state.users}
-                                              columns={this.state.userColumns}
-                                              keyColumn={"id"} prefix={'user'}
-                                              title={'User list'} dtKey={'users'}/> : null
-                                   }
-                               </div>
+                               {/*<div className={classes.ordersContainer}>*/}
+                               {/*    { this.state.users ?*/}
+                               {/*        <Table data={this.state.users}*/}
+                               {/*               columns={this.state.userColumns}*/}
+                               {/*               keyColumn={"id"} prefix={'account/admin/user'}*/}
+                               {/*               title={'User list'} dtKey={'users'}/> : null*/}
+                               {/*    }*/}
+                               {/*</div>*/}
                                <div className={classes.ordersContainer}>
                                    {
                                        this.state.orders ?
                                            <Table
                                                data={this.state.orders.slice(0, 5)}
                                                columns={this.state.ordersColumns}
-                                               prefix={'order'} keyColumn={"id"}
+                                               prefix={'account/admin/order'} keyColumn={"id"}
                                                title={"Newest orders"} dtKey={'orders'}/> : null
                                    }
                                </div>
