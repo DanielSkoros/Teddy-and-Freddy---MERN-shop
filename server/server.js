@@ -458,7 +458,7 @@ app.post('/api/admin/getUserOrders', auth, admin, (req,res) => {
 
 if( process.env.NODE_ENV === 'production' ){
     app.get('/*', (req, res) => {
-        res.sendFile(path.join(__dirname + '../client/build/index.html'));
+        res.sendfile(path.resolve(__dirname,'../client','build','index.html'))
     });
 }
 
