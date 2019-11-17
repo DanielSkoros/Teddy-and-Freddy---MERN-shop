@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const formidable = require('express-formidable');
 const cloudinary = require('cloudinary');
 const async = require('async');
+const path = require('path');
+
 
 require('dotenv').config();
 
@@ -16,7 +18,7 @@ mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(express.static('client/build'));
+app.use(express.static(path.join(__dirname, '../client/build')));
 cloudinary.config({
     cloud_name: process.env.CLOUD,
     api_key: process.env.API,
@@ -456,10 +458,9 @@ app.post('/api/admin/getUserOrders', auth, admin, (req,res) => {
 //DEFAULT
 
 if( process.env.NODE_ENV === 'production' ){
-    const path = require('path');
-    app.get('/*',(req,res)=>{
-        res.sendfile(path.resolve(__dirname,'../client','build','index.html'))
-    })
+    app.get('/*', (req, res) => {
+        res.sendFile(path.join(__dirname + '../client/build/index.html'));
+    });
 }
 
 const port = process.env.PORT || 3002;
