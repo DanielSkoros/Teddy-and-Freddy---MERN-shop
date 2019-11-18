@@ -1,5 +1,18 @@
 # Teddy-and-Freddy---MERN-shop
 A full stack plushie shop with user and admin panel
+## Live
+
+https://teddy-and-freddy.herokuapp.com/
+
+## Login
+
+admin: test@test.com, password: 123
+user: user@test.com, password: 123
+
+## Known issues
+
+On a production version, react-datatable by o2xp is not displaying any data. The creator is working on this issue.
+
 ## Getting Started
 
 npm run dev - starts client and server on a localhost (concurrently)
