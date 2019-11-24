@@ -7,8 +7,12 @@ import { faBacon } from '@fortawesome/free-solid-svg-icons'
 import { faSquare } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import classes from "./sidebar.module.css";
+import Search from "./Search/Search";
 
 const Sidebar = (props) => {
+
+    const [hidden, setHidden] = React.useState(false);
+
     const adminLinks = [
         {
             name: 'Home',
@@ -34,35 +38,40 @@ const Sidebar = (props) => {
     const renderUser = () => (
         <>
             <ul className={classes.sidebarNav}>
-                <li className={classes.navItem} onClick={props.close}>
-                    <Link to={'/'} className={classes.navLink}>Search</Link>
+                <li className={classes.navItem} onClick={(e) => hideMenuHandler(e)}>
+                    <Search hideSuggestions={!hidden}/>
                     <FontAwesomeIcon icon={faSearch} className={classes.faLight}/>
                 </li>
             </ul>
             <hr/>
-            <ul className={classes.sidebarNav}>
-                <li className={classes.navItem} onClick={props.close}>
-                    <Link to={'/shop/plushies'} className={classes.navLinkSmall}>Plushies</Link>
-                    <FontAwesomeIcon icon={faDog} className={classes.faNormal}/>
-                </li>
-                <li className={classes.navItem} onClick={props.close}>
-                    <Link to={'/shop/blankets'} className={classes.navLinkSmall} >Blankets</Link>
-                    <FontAwesomeIcon icon={faBacon} className={classes.faNormal}/>
-                </li>
-                <li className={classes.navItem} onClick={props.close}>
-                    <Link to={'/shop/pillows'} className={classes.navLinkSmall} >Pillows</Link>
-                    <FontAwesomeIcon icon={faSquare} className={classes.faNormal}/>
-                </li>
-            </ul>
-            <hr/>
-            <ul className={`${classes.sidebarNav} ${classes.noBottomMargin}`}>
-                <li className={classes.navItem} onClick={props.close}>
-                    <Link to={'/account/login'} className={classes.navLinkCompany} >Account</Link>
-                </li>
-                <li className={`${classes.navItem} ${classes.noBottomMargin}`} onClick={props.close}>
-                    <Link to={'/company/contact'} className={classes.navLinkCompany} >Contact</Link>
-                </li>
-            </ul>
+            {
+               hidden ? null :
+                    <>
+                        <ul className={classes.sidebarNav} >
+                            <li className={classes.navItem} onClick={props.close}>
+                                <Link to={'/shop/plushies'} className={classes.navLinkSmall}>Plushies</Link>
+                                <FontAwesomeIcon icon={faDog} className={classes.faNormal}/>
+                            </li>
+                            <li className={classes.navItem} onClick={props.close}>
+                                <Link to={'/shop/blankets'} className={classes.navLinkSmall} >Blankets</Link>
+                                <FontAwesomeIcon icon={faBacon} className={classes.faNormal}/>
+                            </li>
+                            <li className={classes.navItem} onClick={props.close}>
+                                <Link to={'/shop/pillows'} className={classes.navLinkSmall} >Pillows</Link>
+                                <FontAwesomeIcon icon={faSquare} className={classes.faNormal}/>
+                            </li>
+                        </ul>
+                        <hr/>
+                        <ul className={`${classes.sidebarNav} ${classes.noBottomMargin}`}>
+                            <li className={classes.navItem} onClick={props.close}>
+                                <Link to={'/account/login'} className={classes.navLinkCompany} >Account</Link>
+                            </li>
+                            <li className={`${classes.navItem} ${classes.noBottomMargin}`} onClick={props.close}>
+                                <Link to={'/company/contact'} className={classes.navLinkCompany} >Contact</Link>
+                            </li>
+                        </ul>
+                    </>
+            }
         </>
     );
     const renderAdmin = () => (
@@ -76,9 +85,18 @@ const Sidebar = (props) => {
             }
         </ul>
     );
+
+    const hideMenuHandler = (e) => {
+        if (e.target.type === 'text'){
+            setHidden(true)
+        } else {
+            setHidden(false)
+        }
+    };
+
     return (
             <div className={`${classes.sidebar} ${props.open ? classes.active : ''}`}>
-                <div className={classes.container}>
+                <div className={classes.container} onClick={(e) => hideMenuHandler(e)}>
                     {props.admin ? renderAdmin() : renderUser()}
                     <div onClick={props.close} className={classes.goBackContainer}>
                         <div className={classes.backBtn}>

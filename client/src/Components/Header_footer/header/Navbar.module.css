@@ -1,7 +1,7 @@
 .navbar {
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     color: white;
     margin: auto;
@@ -21,7 +21,7 @@
 .middle {
     display: flex;
     font-size: 24px;
-    padding: 0 35px;
+    margin: auto 0 auto 40px;
 }
 
 .iconCart {

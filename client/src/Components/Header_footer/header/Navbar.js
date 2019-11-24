@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "./Navbar.module.css";
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faEnvelope, faShoppingBag} from "@fortawesome/free-solid-svg-icons";
 import Logo from "./Logo";
+import Search from "./Search/Search";
 
 const Navbar = (props) => {
+
+    const showSearch = useState(false);
+
     const adminLinks = [
         {
             name: 'Home',
@@ -66,7 +70,7 @@ const Navbar = (props) => {
                         <Link to={'/company/about'} className={classes.navLinkSmall}>about</Link>
                     </li>
                     <li className={classes.navItem}>
-                        <Link to={'/search'} className={classes.navLinkSmall}>search</Link>
+                        <Search />
                     </li>
                 </ul>
             </div>

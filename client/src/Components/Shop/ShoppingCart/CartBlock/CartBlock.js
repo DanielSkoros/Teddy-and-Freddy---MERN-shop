@@ -5,9 +5,18 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
 import {faMinus} from '@fortawesome/free-solid-svg-icons'
 
-const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOne, subtractOne}) => {
+String.prototype.trunc =
+    function( n, useWordBoundary ){
+        if (this.length <= n) { return this; }
+        let subString = this.substr(0, n-1);
+        return (useWordBoundary
+            ? subString.substr(0, subString.lastIndexOf(' '))
+            : subString) + " ...";
+    };
+
+const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOne, subtractOne, cart = true}) => {
     return (
-        image ?
+        cart ?
             <div className={classes.cartBlock}>
                 <div className={classes.item}>
                     <div className={classes.buttons}>
@@ -21,7 +30,7 @@ const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOn
 
                     <div className={classes.description}>
                         <Link to={linkto}>
-                            {name}
+                            {name.trunc(15, true)}
                         </Link>
                         <div className={classes.totalPrice}>{count} x ${price}</div>
                     </div>
@@ -38,13 +47,17 @@ const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOn
                 </div>
             </div>
             :
-            <div className={classes.cartBlock}>
-                <div className={classes.item}>
-                    <div className={classes.description}>
+            <div className={classes.cartBlockModified}>
+                <div className={classes.itemModified}>
+                    <div className={classes.image}>
+                        <img src={image} alt=""/>
+                    </div>
+
+                    <div className={classes.descriptionModified}>
                         <Link to={linkto}>
-                            {name}
+                            {name.trunc(15, true)}
                         </Link>
-                        <div className={classes.totalPrice}>{count} x ${price}</div>
+                        <div className={classes.totalPrice} style={{color: 'white'}}>${price}</div>
                     </div>
                 </div>
             </div>

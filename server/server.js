@@ -172,6 +172,16 @@ app.post('/api/product/material', auth, admin, (req,res) => {
     })
 });
 
+app.get('/api/product/searchByName/:query', (req,res) => {
+    Product.find(
+        {'name': {$regex: `.*${req.params.query}.*`}},
+        (err,articles)=>{
+            if(err) return res.status(400).send(err);
+            res.send(articles)
+        }
+    )
+});
+
 app.get('/api/product/articles_by_id/:id', (req, res) => {
     const id = req.params.id;
     Product.
