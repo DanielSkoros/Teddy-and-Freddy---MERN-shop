@@ -44,8 +44,9 @@
 }
 
 .buttonContainer {
-    width: 50%;
-    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .buttonContainerShop {
