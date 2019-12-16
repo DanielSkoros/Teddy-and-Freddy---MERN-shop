@@ -18,6 +18,7 @@ import Users from "./Components/Admin/Users/Users";
 import UserDetail from "./Components/Admin/Users/UserDetail/UserDetail";
 import Page404 from "./helpers/404/page404";
 import EditProduct from "./Components/Admin/EditProduct/EditProduct";
+import Details from "./Components/User/Orders/Details/Details";
 const Routes = () => {
 
   return (
@@ -32,6 +33,7 @@ const Routes = () => {
         <Route exact path={'/user/checkout/payment'} component={Auth(Payment, null, false)} />
         <Route exact path={'/user/dashboard'} component={Auth(Dashboard, false)} />
         <Route exact path={'/user/orders'} component={Auth(Orders, true, false)} />
+        <Route exact path={'/user/orders/:id'} component={Auth(Details, true, false)} />
 
 
         <Route exact path={'/account/admin/add_product'} component={Auth(AddProduct, true, true)} />

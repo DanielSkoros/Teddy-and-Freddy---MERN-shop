@@ -371,9 +371,10 @@ app.post('/api/users/updateHistory', auth, (req, res) => {
 
 app.post('/api/users/purchaseSuccess', auth, (req,res) => {
     const id = req.body.id;
+    const status = req.body.status;
     Order.findOneAndUpdate(
         {_id: id},
-        {$set: {status: 'payed'}},
+        {$set: {status: status}},
         (err, doc) => {
             if(err) return res.json({success:false,err});
             res.status(200).json({

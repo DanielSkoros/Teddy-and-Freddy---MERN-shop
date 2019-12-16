@@ -70,9 +70,10 @@ export const updateHistory = orderId => {
     }
 };
 
-export const successBuy = orderId => {
+export const successBuy = (orderId, status = 'payed') => {
     const data = {
-        id: orderId
+        id: orderId,
+        status
     };
     const request = axios.post(`${USER_SERVER}/purchaseSuccess`, data)
         .then(res => res.data)

@@ -57,7 +57,7 @@ class Orders extends Component {
                        <h1>Your orders</h1>
                        <Table data={this.state.orders}
                               columns={this.ordersColumns}
-                              prefix={'user/order'} keyColumn={"id"}
+                              prefix={'user/orders'} keyColumn={"id"}
                               title={"Your orders"} dtKey={'userOrders'}/>
                    </div>
                </Layout>

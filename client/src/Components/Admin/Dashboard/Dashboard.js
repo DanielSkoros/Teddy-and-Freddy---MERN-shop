@@ -149,9 +149,10 @@ class AdminDashboard extends Component {
                                    {
                                        this.state.orders ?
                                            <Table
-                                               data={this.state.orders.slice(0, 5)}
+                                               data={this.state.orders}
                                                columns={this.state.ordersColumns}
-                                               prefix={'account/admin/order'} keyColumn={"id"}
+                                               height={'600px'}
+                                               prefix={'user/orders'} keyColumn={"id"}
                                                title={"Newest orders"} dtKey={'orders'}/> : null
                                    }
                                </div>

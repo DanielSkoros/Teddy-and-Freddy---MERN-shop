@@ -3,7 +3,7 @@ import { Datatable } from "@o2xp/react-datatable";
 import {Link} from "react-router-dom";
 
 
-const Table = ({data, columns, keyColumn, title, dtKey, prefix, locationData}) => {
+const Table = ({data, columns, keyColumn, title, dtKey, prefix, locationData, height}) => {
     let options = {
         keyColumn: keyColumn,
         title: title,
@@ -14,7 +14,7 @@ const Table = ({data, columns, keyColumn, title, dtKey, prefix, locationData}) =
         font: 'Nunito',
         dimensions: {
             datatable: {
-                height: '350px',
+                height: height || '350px',
                 width: '100%'
             }
         },
@@ -62,7 +62,7 @@ const Table = ({data, columns, keyColumn, title, dtKey, prefix, locationData}) =
             val = <div style={{ color: "black", textAlign: "left" }}>{(new Date(cellVal)).toLocaleDateString('en-US', DATE_OPTIONS)}</div>;
         }
 
-        if (column.dataType === 'text'){
+        if (column.dataType === 'text' && prefix){
             val =
                 <div style={{ color: "black", textAlign: "left" }}>
                     <Link to={{

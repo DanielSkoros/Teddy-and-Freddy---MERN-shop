@@ -40,7 +40,8 @@ class Users extends Component {
                                data={this.props.location.state.data}
                                columns={this.state.userColumns}
                                keyColumn={"id"} title={'User list'}
-                               dtKey={'userList'} prefix={'user'}/>
+                               height={'600px'}
+                               dtKey={'userList'}   prefix={'account/admin/user'}/>
                     </div>
                 </AdminLayout>
         );
@@ -49,7 +50,7 @@ class Users extends Component {
 
 const mapStateToProps = state => {
     return {
-        usersList: state.admin.usersList
+        usersList: state.admin
     }
 };
 
