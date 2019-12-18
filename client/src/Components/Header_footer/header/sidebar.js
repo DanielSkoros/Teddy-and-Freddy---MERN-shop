@@ -39,7 +39,7 @@ const Sidebar = (props) => {
         <>
             <ul className={classes.sidebarNav}>
                 <li className={classes.navItem} onClick={(e) => hideMenuHandler(e)}>
-                    <Search hideSuggestions={!hidden}/>
+                    <Search hideSuggestions={!hidden} hideMenu={props.close}/>
                     <FontAwesomeIcon icon={faSearch} className={classes.faLight}/>
                 </li>
             </ul>
@@ -86,6 +86,7 @@ const Sidebar = (props) => {
         </ul>
     );
 
+
     const hideMenuHandler = (e) => {
         if (e.target.type === 'text'){
             setHidden(true)
@@ -93,7 +94,6 @@ const Sidebar = (props) => {
             setHidden(false)
         }
     };
-
     return (
             <div className={`${classes.sidebar} ${props.open ? classes.active : ''}`}>
                 <div className={classes.container} onClick={(e) => hideMenuHandler(e)}>

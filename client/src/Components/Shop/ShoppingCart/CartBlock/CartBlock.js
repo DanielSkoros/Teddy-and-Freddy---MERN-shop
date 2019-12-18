@@ -54,9 +54,7 @@ const CartBlock = ({id, name, price, image, linkto, count, deleteFromCart, addOn
                     </div>
 
                     <div className={classes.descriptionModified}>
-                        <Link to={linkto}>
                             {name.trunc(15, true)}
-                        </Link>
                         <div className={classes.totalPrice} style={{color: 'white'}}>${price}</div>
                     </div>
                 </div>

@@ -13,10 +13,9 @@ class Search extends Component {
     getInfo = () => {
         axios.get(`/api/product/searchByName/${this.state.query}`)
             .then(res => {
-                console.log(res)
                 this.setState({
                     results: res.data
-                }, () => console.log(this.state))
+                })
             })
     };
 
@@ -41,8 +40,8 @@ class Search extends Component {
                     className={classes.searchInput}
                 />
                 {
-                    !this.props.hideSuggestions &&this.state.query && this.state.results.length > 0 ?
-                        <Suggestions results={this.state.results} />
+                    !this.props.hideSuggestions && this.state.query && this.state.results.length > 0 ?
+                        <Suggestions results={this.state.results} hideMenu={this.props.hideMenu}/>
                         : null
                 }
             </form>
