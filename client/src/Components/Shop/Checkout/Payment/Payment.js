@@ -14,21 +14,48 @@ class Payment extends Component {
         cancelled: false,
     };
 
+
     renderPaymentScreen = () => (
-        <div className={classes.Card}>
-            <div className={classes.cardContent}>
-                <h1 className={classes.Heading}>Please make a following payment: </h1>
-                <p>Total: <span>{this.props.location.state.total}$</span></p>
-                <p>Account no: <span>xxxxxxxxxxxxxxxxxxxxx</span></p>
-                <p>Title: <span>{this.props.location.state.id}</span></p>
+        <div className={classes.container}>
+            <div className={classes.info}>
+                <div className={classes.section}>
+                    <p>Receipt for<br/><span>Teddy and Freddy</span></p>
+                </div>
+                <div className={classes.section}>
+                    <p>Amount<br/><span>$ {this.props.location.state.total} USD</span></p>
+                </div>
+                <div className={classes.section}>
+                    <p>Date<br/><span>{Date.now()}</span></p>
+                </div>
+                <div className={classes.section}>
+                    <p>Issuer<br/><span>Teddy and Freddy</span></p>
+                </div>
+                <div className={classes.section}>
+                    <p>Order ID:<br/><span>{this.props.location.state.id}</span></p>
+                </div>
             </div>
-            <div className={classes.cardFooter}>
-                <Paypal
-                    toPay={this.props.location.state.total}
-                    transactionError={data => this.transactionError(data)}
-                    transactionCancelled={data => this.transactionCancelled(data)}
-                    onSuccess={data => this.transactionSuccess(data)}
-                />
+            <div className={classes.message}>
+                <div className={classes.header}>
+                    Please make a following payment
+                </div>
+                <div className={classes.section}>
+                    <p>Name<br/><span>Teddy and Freddy</span></p>
+                </div>
+                <div className={classes.section}>
+                    <p>Account number<br/><span>0000 0000 0000 0000 0000 0000</span></p>
+                </div>
+                <div className={classes.section}>
+                    <p>Title<br/><span>{this.props.location.state.id}</span></p>
+                </div>
+                <div className={classes.section}>
+                    <p>Amount<br/><span>$ {this.props.location.state.total} USD</span></p>
+                </div>
+                 <Paypal
+                     toPay={this.props.location.state.total}
+                     transactionError={data => this.transactionError(data)}
+                     transactionCancelled={data => this.transactionCancelled(data)}
+                     onSuccess={data => this.transactionSuccess(data)}
+                 />
             </div>
         </div>
     );
